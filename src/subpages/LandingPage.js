@@ -1,61 +1,41 @@
-import React from "react"
-import Navbar from "../components/Navbar"
-import { useStaticQuery, graphql, Link } from "gatsby"
+import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
+import Navbar from '../components/Navbar';
 
 function LandingPage() {
   const { pageDataYaml } = useStaticQuery(graphql`
     {
       pageDataYaml {
-        welcomeText
         landingText
+        newFeatures
       }
     }
-  `)
+  `);
 
-  const { welcomeText, landingText } = pageDataYaml
+  const { landingText, newFeatures } = pageDataYaml;
 
   const pageStyle = {
     backgroundImage:
-      "url(https://images.pexels.com/photos/113338/pexels-photo-113338.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)",
-    backgroundSize: "cover",
-    backgroundRepeat: "no-repeat",
-    backgroundPosition: "center",
-    color: "white",
-    backgroundColor: "rgba(0, 0, 0, 0.6)",
-    backgroundBlendMode: "multiply",
-  }
-
-  const welcomeStyle = {
-    letterSpacing: "0.25em",
-  }
+      'url(https://images.unsplash.com/photo-1476546516825-6c911f1059e7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center',
+    color: 'white',
+    backgroundColor: 'rgba(0, 0, 0, 0.6)',
+    backgroundBlendMode: 'multiply',
+  };
 
   return (
-    <section id = "home" style={pageStyle} className = "container-fluid">
+    <section id="home" style={pageStyle} className="container-fluid">
       <div className="container">
         <Navbar />
         <div className="centerItems">
-          <h6 style={welcomeStyle}>{welcomeText}</h6>
-          <h1>{landingText}</h1>
-          <button
-            style={{
-              width: "200px",
-              padding: "10px",
-              border: "none",
-              boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
-              background: "#FFA800",
-              borderRadius: "30px",
-              textTransform: "uppercase",
-              color : "white",
-              fontWeight : "600",
-              marginTop : "20px"
-            }}
-          >
-            Start a Project
-          </button>
+          <h1 style={{ color: '#DCDCDC' }}>{landingText}</h1>
+          <p style={{ marginTop: '20px', fontSize: '20px' }}>{newFeatures}</p>
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default LandingPage
+export default LandingPage;
