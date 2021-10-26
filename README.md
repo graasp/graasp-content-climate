@@ -1,6 +1,6 @@
 # Graasp Climate Landing Page
 
-[Landing page](https://climate.graasp.org) for the suite of interactive web applications for investigating the science of global warming, which were built by the Graasp team and its collaborators in 2021.
+[Landing page](https://climate.graasp.org) for the suite of interactive web applications for investigating the science of global warming, built by the Graasp team and its collaborators in 2021.
 
 The landing page contains links to the applications, a _Team_ section, a contact form, and logos of the project's sponsors.
 
