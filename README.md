@@ -25,8 +25,8 @@ Make sure you have GatsbyJS installed. If you don't, click [here](https://www.ga
 When you are ready to deploy the website:
 
 1. Run `yarn build`.
-2. Deploy the website to the development environment ([https://climate.dev.graasp.org](#)) by running `./scripts/deploy.sh -e .env.dev`.
-3. Deploy the website to production ([https://climate.graasp.org](#)) by running `./scripts/deploy.sh -e .env.prod`.
+2. Deploy the website to the development environment ([https://climate.dev.graasp.org](https://climate.dev.graasp.org)) by running `./scripts/deploy.sh -e .env.dev`.
+3. Deploy the website to production ([https://climate.graasp.org](https://climate.graasp.org)) by running `./scripts/deploy.sh -e .env.prod`.
 
 ## Credits
 
