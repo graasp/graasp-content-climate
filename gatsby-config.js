@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Krisp`,
-    description: `A Clean, Minimal and Responsive Site`,
-    author: `@mohanmonu777`,
+    title: `Graasp Climate`,
+    description: `Landing page for the Graasp suite of applications on climate change`,
+    author: `Hagop Taminian`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
