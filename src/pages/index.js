@@ -10,9 +10,7 @@ import Footer from '../components/Footer';
 function Index() {
   return (
     <div>
-      <Helmet>
-        <title>Graasp Climate</title>
-      </Helmet>
+      <Helmet title="Graasp Climate" />
       <LandingPage />
       <Services />
       <Team />

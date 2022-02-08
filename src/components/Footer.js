@@ -52,7 +52,7 @@ function Footer() {
             <a href="https://graasp.org" target="_blank" rel="noreferrer">
               graasp.org
             </a>{' '}
-            2021
+            {new Date().getFullYear()}
           </div>
         </div>
       </footer>
