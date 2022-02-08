@@ -1,4 +1,5 @@
 import React from 'react';
+import { StaticImage } from 'gatsby-plugin-image';
 
 function Team() {
   return (
@@ -20,6 +21,11 @@ function Team() {
             Taminian from the Graasp team (École Polytechnique Fédérale de
             Lausanne and Graasp.org).
           </div>
+          <StaticImage
+            src="../images/equipe.JPG"
+            alt="Team photo"
+            style={{ marginBottom: 50 }}
+          />
         </div>
       </div>
     </div>
