@@ -26,7 +26,14 @@ function Services() {
           style={{ display: 'flex', alignItems: 'center' }}
         >
           <h1 className="text-center my-5">Simulations</h1>
-          <div className="row" style={{ width: '105%' }}>
+          <div
+            className="row"
+            style={{
+              display: 'flex',
+              justifyContent: 'space-between',
+              width: '105%',
+            }}
+          >
             {allServicesYaml.edges.map(({ node }, index) => (
               <ServiceItem
                 title={node.simulation[0]}
