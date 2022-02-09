@@ -29,6 +29,7 @@ const en = {
     Submit: 'Submit',
     'Supported by': 'Supported by',
     Copyright: 'Copyright',
+    'Page Not Found': 'Page Not Found',
   },
 };
 
