@@ -15,18 +15,6 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `gatsby-starter-krisp`,
-        short_name: `krisp`,
-        start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/favicon.svg`,
-      },
-    },
     `gatsby-transformer-yaml`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -34,5 +22,7 @@ module.exports = {
         path: `./content/data/`,
       },
     },
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
   ],
 };

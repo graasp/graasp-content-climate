@@ -1,7 +1,11 @@
-import React from 'react';
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+import React, { useState } from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
+import i18n from '../config/i18n/i18n';
 
 function Navbar() {
+  const [language, setLanguage] = useState('en');
+
   const textStyle = {
     color: '#cdc3f3',
     fontWeight: '600',
@@ -41,6 +45,23 @@ function Navbar() {
               <li className="nav-item">
                 <AnchorLink className="nav-link" href="#team">
                   Team
+                </AnchorLink>
+              </li>
+              {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events */}
+              <li
+                className="nav-item"
+                onClick={() => {
+                  if (language === 'en') {
+                    i18n.changeLanguage('fr');
+                    setLanguage('fr');
+                  } else {
+                    i18n.changeLanguage('en');
+                    setLanguage('en');
+                  }
+                }}
+              >
+                <AnchorLink className="nav-link" href="#">
+                  {language === 'en' ? 'FR' : 'EN'}
                 </AnchorLink>
               </li>
             </ul>

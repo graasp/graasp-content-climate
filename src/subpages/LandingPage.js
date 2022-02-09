@@ -1,18 +1,9 @@
 import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+import { useTranslation } from 'react-i18next';
 import Navbar from '../components/Navbar';
 
 function LandingPage() {
-  const { pageDataYaml } = useStaticQuery(graphql`
-    {
-      pageDataYaml {
-        landingText
-        newFeatures
-      }
-    }
-  `);
-
-  const { landingText, newFeatures } = pageDataYaml;
+  const { t } = useTranslation();
 
   const pageStyle = {
     backgroundImage:
@@ -30,8 +21,16 @@ function LandingPage() {
       <div className="container">
         <Navbar />
         <div className="centerItems">
-          <h1 style={{ color: '#DCDCDC' }}>{landingText}</h1>
-          <p style={{ marginTop: '20px', fontSize: '20px' }}>{newFeatures}</p>
+          <h1 style={{ color: '#DCDCDC' }}>
+            {t(
+              'Active learning simulations for investigating the science of global warming',
+            )}
+          </h1>
+          <p style={{ marginTop: '20px', fontSize: '20px' }}>
+            Based on climate education research • Adapted for middle and high
+            schools • Tested in classrooms • Easily embedded in Graasp
+            activities and other web platforms
+          </p>
         </div>
       </div>
     </section>
