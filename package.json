@@ -15,6 +15,7 @@
     "gatsby-source-filesystem": "^4.7.0",
     "gatsby-transformer-sharp": "^4.7.0",
     "gatsby-transformer-yaml": "^2.2.3",
+    "i18next": "^21.6.11",
     "jquery": "^3.4.1",
     "popper.js": "^1.15.0",
     "prop-types": "^15.7.2",
@@ -22,6 +23,7 @@
     "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
+    "react-i18next": "^11.15.4",
     "react-icons": "^4.2.0",
     "react-reveal": "^1.2.2"
   },
