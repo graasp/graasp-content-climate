@@ -8,7 +8,16 @@ function ServiceItem({ title, description, web, github }) {
   return (
     <Fade bottom>
       <div className="col-lg-3 my-4 col-sm-12" style={{ textAlign: 'center' }}>
-        <h4>{title}</h4>
+        <h4>
+          <a
+            href={web}
+            className="appTitle"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            {title}
+          </a>
+        </h4>
         <p style={{ color: 'white' }}>{description}</p>
         <div>
           <a

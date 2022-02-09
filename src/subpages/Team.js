@@ -12,7 +12,15 @@ function Team() {
         <div className="flexbox">
           <h1 className="text-center my-4">Team</h1>
           <div className="my-5">
-            The simulations were designed and validated by Philippe Kobel and{' '}
+            The simulations were designed and validated by{' '}
+            <a
+              href="https://www.youtube.com/channel/UCWHwTr1dGYAzAFeMOfluwFg"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Philippe Kobel
+            </a>{' '}
+            and{' '}
             <a
               href="http://gerez.info"
               target="_blank"

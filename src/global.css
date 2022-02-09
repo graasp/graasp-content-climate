@@ -46,3 +46,13 @@ textarea:focus {
 footer {
   color: #b9a4de;
 }
+
+.appTitle {
+  color: #88a8be;
+  text-decoration: none;
+}
+
+.appTitle:hover {
+  color: #566d7c;
+  text-decoration: none;
+}
