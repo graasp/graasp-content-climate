@@ -26,14 +26,9 @@ function LandingPage() {
               'Active learning simulations for investigating the science of global warming',
             )}
           </h1>
-          <p style={{ marginTop: '20px', marginBottom: 0, fontSize: '20px' }}>
+          <p style={{ marginTop: '20px', fontSize: '20px' }}>
             {t(
-              'Based on climate education research • Adapted for middle and high schools • Tested in classrooms',
-            )}
-          </p>
-          <p style={{ fontSize: '20px' }}>
-            {t(
-              '• Easily embedded in Graasp activities and other web platforms',
+              'Based on climate education research • Adapted for middle and high schools • Tested in classrooms • Easily embedded in Graasp activities and other web platforms',
             )}
           </p>
         </div>

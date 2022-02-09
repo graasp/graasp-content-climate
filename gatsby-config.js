@@ -16,12 +16,6 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-yaml`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `./content/data/`,
-      },
-    },
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
   ],
