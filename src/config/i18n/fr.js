@@ -29,6 +29,7 @@ const fr = {
     Submit: 'Envoyer',
     'Supported by': 'Supported by',
     Copyright: 'Copyright',
+    'Page Not Found': 'Page non trouvée',
   },
 };
 
