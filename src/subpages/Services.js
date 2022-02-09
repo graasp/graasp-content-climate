@@ -1,19 +1,10 @@
 import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+import { useTranslation } from 'react-i18next';
 import ServiceItem from '../components/ServiceItem';
 
 function Services() {
-  const { allServicesYaml } = useStaticQuery(graphql`
-    {
-      allServicesYaml {
-        edges {
-          node {
-            simulation
-          }
-        }
-      }
-    }
-  `);
+  const { t } = useTranslation();
+
   return (
     <div
       id="services"
@@ -25,7 +16,7 @@ function Services() {
           className="flexbox"
           style={{ display: 'flex', alignItems: 'center' }}
         >
-          <h1 className="text-center my-5">Simulations</h1>
+          <h1 className="text-center my-5">{t('Simulations')}</h1>
           <div
             className="row"
             style={{
@@ -34,20 +25,33 @@ function Services() {
               width: '105%',
             }}
           >
-            {allServicesYaml.edges.map(({ node }, index) => (
-              <ServiceItem
-                title={node.simulation[0]}
-                description={node.simulation[1]}
-                web={node.simulation[2]}
-                github={node.simulation[3]}
-                // eslint-disable-next-line react/no-array-index-key
-                key={index}
-              />
-            ))}
+            <ServiceItem
+              title={t('Oscillating charge')}
+              description={t(
+                'Electromagnetic waves emitted by an oscillating charge',
+              )}
+              web="https://apps.graasp.eu/5acb589d0d5d9464081c2d46/5fc795f6f254ade34781a368/latest/index.html"
+              github="https://github.com/graasp/graasp-app-radiating-charge"
+            />
+            <ServiceItem
+              title={t('Thermal radiation')}
+              description={t(
+                'Thermal radiation emitted by a planetary surface',
+              )}
+              web="https://apps.graasp.eu/5acb589d0d5d9464081c2d46/602bdf211db0d51cb392aeb9/latest/index.html"
+              github="https://github.com/graasp/graasp-app-thermal-radiation"
+            />
+            <ServiceItem
+              title={t('Radiation absorption')}
+              description={t('Interaction between radiation and gas molecules')}
+              web="https://apps.graasp.eu/5acb589d0d5d9464081c2d46/60546e814e95e95abdd404a9/latest/index.html"
+              github="https://github.com/graasp/graasp-app-radiation-absorption"
+            />
           </div>
           <p style={{ fontSize: 12, marginTop: 24 }}>
-            * Recommended pedagogical prerequisites: Concepts of electric
-            charges, atoms, molecules, energy, and power
+            {t(
+              '* Recommended pedagogical prerequisites: Concepts of electric charges, atoms, molecules, energy, and power',
+            )}
           </p>
         </div>
       </div>

@@ -1,6 +1,9 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 function Footer() {
+  const { t } = useTranslation();
+
   return (
     <div>
       <footer className="py-3" style={{ backgroundColor: '#00264a' }}>
@@ -16,7 +19,7 @@ function Footer() {
         >
           <div>
             <div style={{ fontWeight: 900, marginBottom: 7.5 }}>
-              Supported by
+              {t('Supported by')}
             </div>
             <a
               href="https://www.credit-suisse.com/about-us/en/our-company/corporate-responsibility/economy-society/switzerland/jubilee-fund.html"
@@ -48,7 +51,7 @@ function Footer() {
             </a>
           </div>
           <div>
-            © Copyright{' '}
+            © {t('Copyright')}{' '}
             <a href="https://graasp.org" target="_blank" rel="noreferrer">
               graasp.org
             </a>{' '}

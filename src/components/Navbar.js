@@ -1,10 +1,12 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import i18n from '../config/i18n/i18n';
 
 function Navbar() {
   const [language, setLanguage] = useState('en');
+  const { t } = useTranslation();
 
   const textStyle = {
     color: '#cdc3f3',
@@ -34,17 +36,17 @@ function Navbar() {
             <ul className="navbar-nav">
               <li className="nav-item active">
                 <AnchorLink className="nav-link" href="#">
-                  Home <span className="sr-only">(current)</span>
+                  {t('Home')} <span className="sr-only">(current)</span>
                 </AnchorLink>
               </li>
               <li className="nav-item">
                 <AnchorLink className="nav-link" href="#services">
-                  Simulations
+                  {t('Simulations')}
                 </AnchorLink>
               </li>
               <li className="nav-item">
                 <AnchorLink className="nav-link" href="#team">
-                  Team
+                  {t('Team')}
                 </AnchorLink>
               </li>
               {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events */}

@@ -27,11 +27,14 @@ function LandingPage() {
             )}
           </h1>
           <p style={{ marginTop: '20px', marginBottom: 0, fontSize: '20px' }}>
-            Based on climate education research • Adapted for middle and high
-            schools • Tested in classrooms
+            {t(
+              'Based on climate education research • Adapted for middle and high schools • Tested in classrooms',
+            )}
           </p>
           <p style={{ fontSize: '20px' }}>
-            • Easily embedded in Graasp activities and other web platforms
+            {t(
+              '• Easily embedded in Graasp activities and other web platforms',
+            )}
           </p>
         </div>
       </div>
