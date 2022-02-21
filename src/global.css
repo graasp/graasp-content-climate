@@ -56,3 +56,18 @@ footer {
   color: #566d7c;
   text-decoration: none;
 }
+
+.logo-text {
+  color: #cdc3f3;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+@media screen and (max-width: 500px) {
+  .logo-text {
+    font-size: 20px;
+  }
+  .landing-page-text {
+    font-size: 34px;
+  }
+}

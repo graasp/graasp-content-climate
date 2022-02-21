@@ -21,7 +21,7 @@ function LandingPage() {
       <div className="container">
         <Navbar />
         <div className="centerItems">
-          <h1 style={{ color: '#DCDCDC' }}>
+          <h1 style={{ color: '#DCDCDC' }} className="landing-page-text">
             {t(
               'Active learning simulations for investigating the science of global warming',
             )}
