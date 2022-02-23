@@ -17,7 +17,11 @@ function LandingPage() {
   };
 
   return (
-    <section id="home" style={pageStyle} className="container-fluid">
+    <section
+      id="home"
+      style={{ height: '100%', ...pageStyle }}
+      className="container-fluid"
+    >
       <div className="container">
         <Navbar />
         <div className="centerItems">
