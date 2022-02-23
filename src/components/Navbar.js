@@ -9,7 +9,7 @@ function Navbar() {
   const { t } = useTranslation();
 
   return (
-    <div className="pos-f-t">
+    <div className="pos-f-t" style={{ marginBottom: 10 }}>
       <nav className="navbar navbar-dark navbar-expand-md">
         <h4 className="logo-text">GRAASP CLIMATE</h4>
         <button
