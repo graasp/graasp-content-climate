@@ -66,15 +66,32 @@ function Team() {
               >
                 Hagop Taminian
               </a>{' '}
-              from the Graasp team (École Polytechnique Fédérale de Lausanne and
-              Graasp.org).
+              within{' '}
+              <a
+                href="https://people.epfl.ch/denis.gillet"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Denis Gillet&apos;s
+              </a>{' '}
+              group at EPFL (École Polytechnique Fédérale de Lausanne), and were
+              consolidated in collaboration with{' '}
+              <a
+                href="https://www.graasp.org"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Graasp.org
+              </a>
+              .
             </Trans>
           </div>
-          <StaticImage
-            src="../images/equipe.JPG"
-            alt="Team photo"
-            style={{ marginBottom: 50 }}
-          />
+          <StaticImage src="../images/equipe.JPG" alt="Team photo" />
+          <div style={{ marginBottom: 50, fontSize: 14, fontStyle: 'italic' }}>
+            {t(
+              'Left to right: Stéphane Goyette, Denis Gillet, Thierry Gerez, Kim Lan Phan Hoang, Philippe Kobel, Yves Debernardi, and Nicolas Perrin.',
+            )}
+          </div>
         </div>
       </div>
     </div>
