@@ -57,17 +57,30 @@ footer {
   text-decoration: none;
 }
 
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
 .logo-text {
   color: #cdc3f3;
   font-weight: 600;
   letter-spacing: 0.1em;
 }
 
+.logo {
+  width: 175px;
+}
+
 @media screen and (max-width: 500px) {
-  .logo-text {
-    font-size: 20px;
-  }
   .landing-page-text {
     font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 766px) {
+  .logo-text {
+    font-size: 20px;
+    width: 40px;
   }
 }

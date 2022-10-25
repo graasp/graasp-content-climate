@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { StaticImage } from 'gatsby-plugin-image';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import i18n from '../config/i18n/i18n';
 
@@ -11,7 +12,14 @@ function Navbar() {
   return (
     <div className="pos-f-t" style={{ marginBottom: 10 }}>
       <nav className="navbar navbar-dark navbar-expand-md">
-        <h4 className="logo-text">GRAASP CLIMATE</h4>
+        <div className="logo-container">
+          <StaticImage
+            src="../images/logo1.png"
+            alt="Graasp Climate logo"
+            className="logo"
+          />
+          <h4 className="logo-text">GRAASP CLIMATE</h4>
+        </div>
         <button
           className="navbar-toggler"
           type="button"

@@ -77,7 +77,7 @@ function Team() {
               group at EPFL (École Polytechnique Fédérale de Lausanne), and were
               consolidated in collaboration with{' '}
               <a
-                href="https://www.graasp.org"
+                href="https://graasp.org"
                 target="_blank"
                 rel="noopener noreferrer"
               >
