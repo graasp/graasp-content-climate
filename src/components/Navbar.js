@@ -14,7 +14,7 @@ function Navbar() {
       <nav className="navbar navbar-dark navbar-expand-md">
         <div className="logo-container">
           <StaticImage
-            src="../images/logo1.png"
+            src="../images/logo.png"
             alt="Graasp Climate logo"
             className="logo"
           />
