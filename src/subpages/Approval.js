@@ -19,16 +19,16 @@ const Approval = () => {
       }}
     >
       <div className="my-4 mr-4">
-        {language === 'en' ? (
+        {language === 'fr' ? (
           <StaticImage
-            src="../images/Logo-IYBSSD-English.png"
+            src="../images/Logo-IYBSSD-FR.png"
             alt="IYBSSD logo"
             className="iybssd-logo"
             layout="constrained"
           />
         ) : (
           <StaticImage
-            src="../images/Logo-IYBSSD-FR.png"
+            src="../images/Logo-IYBSSD-English.png"
             alt="IYBSSD logo"
             className="iybssd-logo"
             layout="constrained"
