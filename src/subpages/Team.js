@@ -26,7 +26,7 @@ function Team() {
               </a>{' '}
               and{' '}
               <a
-                href="http://gerez.info"
+                href="https://gerez.info"
                 target="_blank"
                 rel="noopener noreferrer"
               >

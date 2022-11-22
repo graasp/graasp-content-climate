@@ -30,6 +30,8 @@ const fr = {
     'Supported by': 'Supported by',
     Copyright: 'Copyright',
     'Page Not Found': 'Page non trouvée',
+    'Approved by the International Year of Basic Sciences for Sustainable Development 2022':
+      "Approuvé par l'Année internationale des sciences fondamentales pour le développement durable 2022",
   },
 };
 
