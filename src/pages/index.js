@@ -10,6 +10,7 @@ import Footer from '../components/Footer';
 import i18n from '../config/i18n/i18n';
 import { useSiteMetadata } from '../hooks/use-site-metadata';
 import favicon from '../images/favicon.png';
+import Approval from '../subpages/Approval';
 
 function Index() {
   const { title, description, author } = useSiteMetadata();
@@ -30,6 +31,7 @@ function Index() {
           <link rel="icon" type="image/png" href={favicon} />
         </Helmet>
         <LandingPage />
+        <Approval />
         <Services />
         <Team />
         <End />
