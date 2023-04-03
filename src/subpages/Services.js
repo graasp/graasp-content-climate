@@ -3,7 +3,9 @@ import { useTranslation } from 'react-i18next';
 import ServiceItem from '../components/ServiceItem';
 
 function Services() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+
+  const lang = `?lang=${i18n.language}`;
 
   return (
     <div
@@ -30,7 +32,7 @@ function Services() {
               description={t(
                 'Electromagnetic waves emitted by an oscillating charge',
               )}
-              web="https://apps.graasp.eu/5acb589d0d5d9464081c2d46/5fc795f6f254ade34781a368/latest/index.html"
+              web={`https://apps.graasp.eu/5acb589d0d5d9464081c2d46/5fc795f6f254ade34781a368/latest/index.html${lang}`}
               github="https://github.com/graasp/graasp-app-radiating-charge"
             />
             <ServiceItem
@@ -38,13 +40,13 @@ function Services() {
               description={t(
                 'Thermal radiation emitted by a planetary surface',
               )}
-              web="https://apps.graasp.eu/5acb589d0d5d9464081c2d46/602bdf211db0d51cb392aeb9/latest/index.html"
+              web={`https://apps.graasp.eu/5acb589d0d5d9464081c2d46/602bdf211db0d51cb392aeb9/latest/index.html${lang}`}
               github="https://github.com/graasp/graasp-app-thermal-radiation"
             />
             <ServiceItem
               title={t('Radiation absorption')}
               description={t('Interaction between radiation and gas molecules')}
-              web="https://apps.graasp.eu/5acb589d0d5d9464081c2d46/60546e814e95e95abdd404a9/latest/index.html"
+              web={`https://apps.graasp.eu/5acb589d0d5d9464081c2d46/60546e814e95e95abdd404a9/latest/index.html${lang}`}
               github="https://github.com/graasp/graasp-app-radiation-absorption"
             />
           </div>
