@@ -22,13 +22,24 @@ function Footer() {
               {t('Supported by')}
             </div>
             <a
-              href="https://www.credit-suisse.com/about-us/en/our-company/corporate-responsibility/economy-society/switzerland/jubilee-fund.html"
+              href="https://www.grstiftung.ch/en.html"
               target="_blank"
               rel="noreferrer"
             >
               <img
-                src="https://user-images.githubusercontent.com/19311953/135832813-9d5aac85-2a5f-4c1e-8bb7-4ab6bc2259a9.png"
-                alt="Credit Suisse Foundation"
+                src="https://user-images.githubusercontent.com/19311953/228587000-340207fa-6b6d-47b8-980b-a8f966d8eeef.png"
+                alt="Gebert Rüf Stiftung"
+                style={{ marginRight: 30 }}
+              />
+            </a>
+            <a
+              href="https://www.education21.ch/fr"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img
+                src="https://user-images.githubusercontent.com/19311953/228587968-2a69698d-7719-4847-9387-e63fa80311ec.png"
+                alt="Éducation 21"
                 style={{ marginRight: 30 }}
               />
             </a>
