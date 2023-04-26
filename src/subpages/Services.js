@@ -32,7 +32,7 @@ function Services() {
               description={t(
                 'Electromagnetic waves emitted by an oscillating charge',
               )}
-              web={`https://apps.graasp.eu/5acb589d0d5d9464081c2d46/5fc795f6f254ade34781a368/latest/index.html${lang}`}
+              web={`https://apps.graasp.org/4b63857b-1bd9-44cf-a72d-4fb7ff531b13/latest/index.html${lang}`}
               github="https://github.com/graasp/graasp-app-radiating-charge"
             />
             <ServiceItem
@@ -40,14 +40,22 @@ function Services() {
               description={t(
                 'Thermal radiation emitted by a planetary surface',
               )}
-              web={`https://apps.graasp.eu/5acb589d0d5d9464081c2d46/602bdf211db0d51cb392aeb9/latest/index.html${lang}`}
+              web={`https://apps.graasp.org/ff4d50d9-1370-4707-a460-02a041474579/index.html${lang}`}
               github="https://github.com/graasp/graasp-app-thermal-radiation"
             />
             <ServiceItem
               title={t('Radiation absorption')}
               description={t('Interaction between radiation and gas molecules')}
-              web={`https://apps.graasp.eu/5acb589d0d5d9464081c2d46/60546e814e95e95abdd404a9/latest/index.html${lang}`}
+              web={`https://apps.graasp.org/35288bda-d787-42f9-b5d6-110d689d0eda/index.html${lang}`}
               github="https://github.com/graasp/graasp-app-radiation-absorption"
+            />
+            <ServiceItem
+              title={t('Global energy balance')}
+              description={t(
+                'Global model including radiation, greenhouse gases, clouds and ice',
+              )}
+              web={`https://apps.graasp.org/f61d6916-be33-4c63-b697-2c7b09a7b8e5/latest/index.html${lang}`}
+              github="https://github.com/graasp/graasp-app-greenhouse-effect"
             />
           </div>
           <p style={{ fontSize: 12, marginTop: 24 }}>
