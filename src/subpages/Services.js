@@ -6,7 +6,7 @@ function Services() {
   const { t, i18n } = useTranslation();
 
   // item id is necessary for standalone preview
-  const qs = `?lang=${i18n.language}&itemId=itemId`;
+  const qs = `?lang=${i18n.language}`;
 
   return (
     <div
@@ -51,7 +51,7 @@ function Services() {
               github="https://github.com/graasp/graasp-app-radiation-absorption"
             />
             <ServiceItem
-              title={t('Global energy balance')}
+              title={t('Energy balance')}
               description={t(
                 'Global model including radiation, greenhouse gases, clouds and ice',
               )}

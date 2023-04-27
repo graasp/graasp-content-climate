@@ -34,7 +34,7 @@ const en = {
     'Page Not Found': 'Page Not Found',
     'Approved by the International Year of Basic Sciences for Sustainable Development 2022':
       'Approved by the International Year of Basic Sciences for Sustainable Development 2022',
-    'Global energy balance': 'Global energy balance',
+    'Energy balance': 'Energy balance',
     'Global model including radiation, greenhouse gases, clouds and ice':
       'Global model including radiation, greenhouse gases, clouds and ice',
   },

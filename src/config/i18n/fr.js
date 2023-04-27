@@ -32,7 +32,7 @@ const fr = {
     'Page Not Found': 'Page non trouvée',
     'Approved by the International Year of Basic Sciences for Sustainable Development 2022':
       "Approuvé par l'Année internationale des sciences fondamentales pour le développement durable 2022",
-    'Global energy balance': 'Bilan énergétique global',
+    'Energy balance': 'Bilan énergétique',
     'Global model including radiation, greenhouse gases, clouds and ice':
       'Modèle global incluant le rayonnement, les gaz à effet de serre, les nuages et les glaces',
   },
