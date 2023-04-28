@@ -41,13 +41,13 @@ function Services() {
               description={t(
                 'Thermal radiation emitted by a planetary surface',
               )}
-              web={`https://apps.graasp.org/ff4d50d9-1370-4707-a460-02a041474579/index.html${qs}`}
+              web={`https://apps.graasp.org/ff4d50d9-1370-4707-a460-02a041474579/latest/index.html${qs}`}
               github="https://github.com/graasp/graasp-app-thermal-radiation"
             />
             <ServiceItem
               title={t('Radiation absorption')}
               description={t('Interaction between radiation and gas molecules')}
-              web={`https://apps.graasp.org/35288bda-d787-42f9-b5d6-110d689d0eda/index.html${qs}`}
+              web={`https://apps.graasp.org/35288bda-d787-42f9-b5d6-110d689d0eda/latest/index.html${qs}`}
               github="https://github.com/graasp/graasp-app-radiation-absorption"
             />
             <ServiceItem
