@@ -31,8 +31,8 @@ jobs:
         # Replace input build-folder or version if needed
         with:
           build-folder: 'public'
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: ${{ secrets.AWS_REGION }}
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID_PROD }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY_PROD }}
+          aws-region: ${{ secrets.AWS_REGION_PROD }}
           aws-s3-bucket-name: ${{ secrets.AWS_S3_BUCKET_NAME }}
           cloudfront-distribution-id: ${{ secrets.CLOUDFRONT_DISTRIBUTION }}
