@@ -4,7 +4,7 @@ import { getLangFromUrl, useTranslations } from '../i18n/utils';
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
-//  Astro.redirect('/'+lang);
+Astro.redirect('/'+lang);
 ---
 
 <div>
