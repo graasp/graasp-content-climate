@@ -16,18 +16,5 @@ Make sure you have GatsbyJS installed. If you don't, click [here](https://www.ga
 
 ### Installation
 
-1. After cloning the repository, run `yarn install`.
-2. Run `yarn start` to launch the project on a live local server. By default, the project will launch on [http://localhost:8000](#).
-3. Edit the source code! The main content of the site is located in `/src/subpages`. When you finish editing, save your changes, and Gatsby will automatically reload [http://localhost:8000](#) to reflect them.
-
-### Deployment
-
-When you are ready to deploy the website:
-
-1. Run `yarn build`.
-2. Deploy the website to the development environment ([https://climate.dev.graasp.org](https://climate.dev.graasp.org)) by running `./scripts/deploy.sh -e .env.dev`.
-3. Deploy the website to production ([https://climate.graasp.org](https://climate.graasp.org)) by running `./scripts/deploy.sh -e .env.prod`.
-
-## Credits
-
-The landing page was adapted from the [Krisp template](https://github.com/algokun/gatsby-starter-krisp) by [algokun](https://github.com/algokun).
+1. After cloning the repository, run `yarn`.
+2. Run `yarn dev` to launch the project on a live local server. 

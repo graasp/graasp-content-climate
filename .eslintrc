@@ -1,57 +1,197 @@
 {
-    "extends": [
-      "airbnb",
-      "prettier"
-    ],
-    "plugins": [
-      "import",
-      "jsx-a11y",
-      "react"
-    ],
-    "env": {
-      "browser": true,
-      "node": true,
-      "mocha": true,
-      "jest": true
+  "extends": [
+    "plugin:import/typescript", // this is needed because airbnb uses eslint-plugin-import
+    "prettier",
+    "plugin:@typescript-eslint/recommended",
+    "eslint:recommended"
+  ],
+  "plugins": ["@typescript-eslint"],
+  "env": {
+    "browser": true,
+    "node": true,
+    "mocha": true,
+    "jest": true
+  },
+  "globals": {
+    "cy": true,
+    "Cypress": true,
+    "JSX": "readonly"
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
     },
-    "globals": {
-      "cy": true,
-      "Cypress": true
-    },
-    "parser": "babel-eslint",
-    "rules": {
-      "no-underscore-dangle": [
-        "error",
-        {
-          "allow": [
-            "_id",
-            "__REDUX_DEVTOOLS_EXTENSION__"
-          ]
-        }
-      ],
-      "jsx-a11y/anchor-is-valid": [
-        "error",
-        {
-          "components": ["Link"],
-          "specialLink": ["to", "hrefLeft", "hrefRight"],
-          "aspects": ["noHref", "invalidHref", "preferButton"]
-        }
-      ],
-      "react/jsx-filename-extension": [
-        1,
-        {
-          "extensions": [".js", ".jsx"]
-        }
-      ],
-      "import/no-named-as-default": 0,
-      "react/static-property-placement": ["error", "property assignment", {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "overrides": [
+    {
+      "files": ["*.jsx", "*.tsx"],
+      "extends":[
+        "airbnb",
+        "plugin:react-hooks/recommended",],
+        "plugins": [ "react-hooks"],
+
+  "rules": {
+    "import/order": "off",
+    "react/function-component-definition": [
+      2,
+      {
+        "namedComponents": "arrow-function"
+      }
+    ],
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off",
+    // remove when possible
+    "@typescript-eslint/no-explicit-any": "off",
+    // disable the rule for all files
+    "no-restricted-syntax": "off",
+    // disable the rule for all files
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "jsx-a11y/anchor-is-valid": [
+      "error",
+      {
+        "components": ["Link"],
+        "specialLink": ["to", "hrefLeft", "hrefRight"],
+        "aspects": ["noHref", "invalidHref", "preferButton"]
+      }
+    ],
+    "react/jsx-filename-extension": [
+      "warn",
+      {
+        "extensions": [".js", ".jsx", ".ts", ".tsx",".astro"]
+      }
+    ],
+    "import/no-named-as-default": "off",
+    "react/static-property-placement": [
+      "error",
+      "property assignment",
+      {
         "childContextTypes": "static public field",
         "contextTypes": "static public field",
         "contextType": "static public field",
         "defaultProps": "static public field",
         "displayName": "static public field",
         "propTypes": "static public field"
-      }],
-      "react/state-in-constructor": ["error", "never"]
+      }
+    ],
+    "react/state-in-constructor": ["error", "never"],
+    "no-console": [
+      1,
+      {
+        "allow": ["error"]
+      }
+    ],
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
+    "react/prop-types": "off",
+    "react/require-default-props": "off",
+    // eslint rule reports false error
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": ["error"],
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "^_",
+        "varsIgnorePattern": "^_",
+        "caughtErrorsIgnorePattern": "^_"
+      }
+    ],
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": true
+      }
+    ]
+  },
+    },
+    {
+      // enable the rule specifically for TypeScript files
+      "files": ["*.ts", "*.tsx"],
+      "rules": {
+        "@typescript-eslint/explicit-module-boundary-types": ["error"]
+      }
+    },
+    {
+      // enable the rule specifically for src files
+      "files": ["src/**/*.js", "src/**/*.tsx", "src/**/*.ts"],
+      "rules": {
+        "no-restricted-syntax": ["error"]
+      }
+    },{
+      // Define the configuration for `.astro` file.
+      "files": ["*.astro"],
+      // Enable this plugin
+      "plugins": ["astro"],
+      "env": {
+        // Enables global variables available in Astro components.
+        "node": true,
+        "astro/astro": true,
+        "es2020": true,
+      },
+      // Allows Astro components to be parsed.
+      "parser": "astro-eslint-parser",
+      // Parse the script in `.astro` as TypeScript by adding the following configuration.
+      // It's the setting you need when using TypeScript.
+      "parserOptions": {
+        "parser": "@typescript-eslint/parser",
+        "extraFileExtensions": [".astro"],
+        // The script of Astro components uses ESM.
+        "sourceType": "module",
+      },
+      "rules": {
+        // Enable recommended rules
+        "astro/no-conflict-set-directives": "error",
+        "astro/no-unused-define-vars-in-style": "error",
+
+        // override/add rules settings here, such as:
+        // "astro/no-set-html-directive": "error"
+      },
+    },
+    {
+      // Define the configuration for `<script>` tag.
+      // Script in `<script>` is assigned a virtual file name with the `.js` extension.
+      "files": ["**/*.astro/*.js", "*.astro/*.js"],
+      "env": {
+        "browser": true,
+        "es2020": true,
+      },
+      "parserOptions": {
+        "sourceType": "module",
+      },
+      "rules": {
+        // override/add rules settings here, such as:
+        // "no-unused-vars": "error"
+
+        // If you are using "prettier/prettier" rule,
+        // you don't need to format inside <script> as it will be formatted as a `.astro` file.
+        "prettier/prettier": "off",
+      },
+    },
+  ],
+  "settings": {
+    "import/extensions": [".js", ".jsx", ".ts", ".tsx"],
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    "import/resolver": {
+      "typescript": {
+        "directory": "./tsconfig.json"
+      },
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
     }
-  }
+  },
+  "ignorePatterns": ["node_modules/*"]
+}

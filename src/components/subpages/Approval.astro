@@ -1,0 +1,38 @@
+---
+import iybssdLogoFr from '../../images/Logo-IYBSSD-FR.png';
+import iybssdLogo from '../../images/Logo-IYBSSD-English.png';
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<div
+  class="container"
+  style={{
+    background: 'white',
+    fontSize: '20px',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: '100%',
+    gap: '20px',
+  }}
+>
+  <div class="my-4">
+    {
+      lang === 'fr' ? (
+        <img src={iybssdLogoFr.src} alt="IYBSSD logo" class="iybssd-logo" />
+      ) : (
+        <img src={iybssdLogo.src} alt="IYBSSD logo" class="iybssd-logo" />
+      )
+    }
+  </div>
+  <div class="my-4">
+    {
+      t(
+        'Approved by the International Year of Basic Sciences for Sustainable Development 2022',
+      )
+    }
+  </div>
+</div>

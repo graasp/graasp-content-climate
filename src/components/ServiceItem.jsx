@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Fade from 'react-reveal/Fade';
-import { AiFillGithub } from 'react-icons/ai';
-import { BiWorld } from 'react-icons/bi';
+import AiFillGithub from '../images/github_icon.svg';
+import BiWorld from '../images/link_icon.svg';
 
 function ServiceItem({ title, description, web, github }) {
+
   return (
     <Fade bottom>
       <div className="col-lg-3 my-4 col-sm-12" style={{ textAlign: 'center' }}>
@@ -26,7 +27,7 @@ function ServiceItem({ title, description, web, github }) {
             target="_blank"
             rel="noreferrer"
           >
-            <BiWorld size={24} style={{ marginRight: '2.5px' }} />
+            <img alt={`${title} link`} src={BiWorld.src} width={24} style={{ marginRight: '2.5px' }} />
           </a>
           <a
             href={github}
@@ -34,7 +35,7 @@ function ServiceItem({ title, description, web, github }) {
             target="_blank"
             rel="noreferrer"
           >
-            <AiFillGithub size={24} style={{ marginLeft: '2.5px' }} />
+            <img alt={`${title} github link`} src={AiFillGithub.src} width={24} style={{ marginLeft: '2.5px' }} />
           </a>
         </div>
       </div>

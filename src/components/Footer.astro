@@ -1,0 +1,114 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import GRS from '../images/grs.svg';
+import EGS from '../images/EGS_Schriftzug_weiss.svg';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<!-- use grid, stack? -->
+<div>
+  <footer class="py-3" style={{ backgroundColor: '#00264a' }}>
+    <div
+      class="container"
+      style={{
+        color: 'white',
+        fontSize: 14,
+      }}
+    >
+      <div style={{ fontWeight: 900, marginBottom: 7.5 }}>
+        {t('Supported by')}
+      </div>
+      <div
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          gap: '30px',
+          paddingBottom: '30px',
+          justifyContent: 'center',
+        }}
+      >
+        <div
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: '20px',
+            flexDirection: 'column',
+            width: '50%',
+            minWidth: '250px',
+          }}
+        >
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '30px',
+              justifyContent: 'center',
+            }}
+          >
+            <a
+              href="https://www.grstiftung.ch/en.html"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img width="100%" src={GRS.src} alt="Gebert Rüf Stiftung" />
+            </a>
+
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '10px',
+              }}
+            >
+              <a
+                href="https://www.education21.ch/fr"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  src="https://user-images.githubusercontent.com/19311953/228587968-2a69698d-7719-4847-9387-e63fa80311ec.png"
+                  alt="Éducation 21"
+                  style={{ marginRight: 30 }}
+                />
+              </a>
+              <a href="https://www.epfl.ch/" target="_blank" rel="noreferrer">
+                <img
+                  src="https://user-images.githubusercontent.com/19311953/135830613-ef0d9d45-4279-4653-a5c8-74c24f45007c.png"
+                  alt="École Polytechnique Fédérale de Lausanne"
+                  style={{ marginRight: 30 }}
+                />
+              </a>
+              <a
+                href="https://www.hepl.ch/accueil.html"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  src="https://user-images.githubusercontent.com/19311953/135833080-23ec97d6-febc-4023-aa14-c1a820a4cda5.png"
+                  alt="Haute École Pédagogique Vaud"
+                />
+              </a>
+            </div>
+          </div>
+          <a
+            style={{ width: '80%' }}
+            href="https://www.ernst-goehner-stiftung.ch"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img width="100%" src={EGS.src} alt="Ernst Göhner Stiftung" />
+          </a>
+        </div>
+      </div>
+      <div>
+        © {t('Copyright')}{' '}
+        <a href="https://graasp.org" target="_blank" rel="noreferrer">
+          graasp.org
+        </a>{' '}
+        {new Date().getFullYear()}
+      </div>
+    </div>
+  </footer>
+</div>
