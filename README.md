@@ -10,11 +10,13 @@ The landing page contains links to the applications, a _Team_ section, a contact
 
 To edit and view the website in your local environment, follow the instructions below.
 
-### Prerequisites
-
-Make sure you have GatsbyJS installed. If you don't, click [here](https://www.gatsbyjs.org/docs/preparing-your-environment/) for installation instructions.
-
 ### Installation
 
 1. After cloning the repository, run `yarn`.
 2. Run `yarn dev` to launch the project on a live local server. 
+
+### Deployment
+
+1. Build the project with `yarn build`
+2. Upload the resulting files
+3. For AWS S3 bucket and Cloudfront settings, you might follow these [instructions](https://docs.astro.build/en/guides/deploy/aws/), especially the part about Cloudfront functions. 
