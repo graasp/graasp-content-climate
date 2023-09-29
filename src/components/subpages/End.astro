@@ -1,0 +1,40 @@
+---
+import Fade from 'react-reveal/Fade';
+
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<div
+  class="container-fluid"
+  style={{ backgroundColor: '#cbe6ef', color: 'white', paddingBottom: 30 }}
+>
+  <div class="container">
+    <div class="flexbox">
+      <Fade left>
+        <h1 class="text-center my-5" style={{ color: 'black' }}>
+          {t('Contact us')}
+        </h1>
+        <div class="row my-4">
+          <div class="col-lg-6 mb-4">
+            <input type="name" class="inputBox" placeholder={t('Your Name')} />
+          </div>
+          <div class="col-lg-6 mb-4">
+            <input
+              type="email"
+              class="inputBox"
+              placeholder={t('Your Email')}
+            />
+          </div>
+        </div>
+        <textarea rows="2" class="inputBox mb-4" placeholder={t('Your Message')}
+        ></textarea>
+        <button class="btn btn-light mb-4 py-3" type="submit">
+          {t('Submit')}
+        </button>
+      </Fade>
+    </div>
+  </div>
+</div>

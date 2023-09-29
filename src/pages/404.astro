@@ -1,0 +1,12 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+Astro.redirect('/'+lang);
+---
+
+<div>
+  <h1>{t('Page Not Found')}</h1>
+</div>

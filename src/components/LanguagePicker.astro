@@ -1,0 +1,19 @@
+---
+import { languages } from '../i18n/ui';
+import { getLangFromUrl } from '../i18n/utils';
+
+const currentLang = getLangFromUrl(Astro.url);
+---
+
+{
+  Object.keys(languages).map((lang) => {
+    if (currentLang === lang) {
+      return null;
+    }
+    return (
+      <a class="nav-link" href={`/${lang}/`}>
+        {lang.toUpperCase()}
+      </a>
+    );
+  })
+}

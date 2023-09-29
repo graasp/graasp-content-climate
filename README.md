@@ -10,24 +10,13 @@ The landing page contains links to the applications, a _Team_ section, a contact
 
 To edit and view the website in your local environment, follow the instructions below.
 
-### Prerequisites
-
-Make sure you have GatsbyJS installed. If you don't, click [here](https://www.gatsbyjs.org/docs/preparing-your-environment/) for installation instructions.
-
 ### Installation
 
-1. After cloning the repository, run `yarn install`.
-2. Run `yarn start` to launch the project on a live local server. By default, the project will launch on [http://localhost:8000](#).
-3. Edit the source code! The main content of the site is located in `/src/subpages`. When you finish editing, save your changes, and Gatsby will automatically reload [http://localhost:8000](#) to reflect them.
+1. After cloning the repository, run `yarn`.
+2. Run `yarn dev` to launch the project on a live local server. 
 
 ### Deployment
 
-When you are ready to deploy the website:
-
-1. Run `yarn build`.
-2. Deploy the website to the development environment ([https://climate.dev.graasp.org](https://climate.dev.graasp.org)) by running `./scripts/deploy.sh -e .env.dev`.
-3. Deploy the website to production ([https://climate.graasp.org](https://climate.graasp.org)) by running `./scripts/deploy.sh -e .env.prod`.
-
-## Credits
-
-The landing page was adapted from the [Krisp template](https://github.com/algokun/gatsby-starter-krisp) by [algokun](https://github.com/algokun).
+1. Build the project with `yarn build`
+2. Upload the resulting files
+3. For AWS S3 bucket and Cloudfront settings, you might follow these [instructions](https://docs.astro.build/en/guides/deploy/aws/), especially the part about Cloudfront functions. 
