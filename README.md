@@ -1,5 +1,7 @@
 # Graasp Climate Landing Page
 
+<a href="https://gitlocalize.com/repo/8976?utm_source=badge"> <img src="https://gitlocalize.com/repo/8976/whole_project/badge.svg" /> </a>
+
 [Landing page](https://climate.graasp.org) for the suite of interactive web applications for investigating the science of global warming, built by the Graasp team and its collaborators in 2021.
 
 The landing page contains links to the applications, a _Team_ section, a contact form, and logos of the project's sponsors.
