@@ -1,0 +1,110 @@
+---
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+import GRS from '../../images/grs.svg';
+import EGS from '../../images/EGS_Schriftzug_weiss.svg';
+import education21 from '../../images/ed21_inv.png';
+import epfl from '../../images/epfl_logo.svg';
+import hep from '../../images/hep_vaud.svg';
+import Supporter from '../Supporter.astro';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<!-- use grid, stack? -->
+<div>
+  <footer class="py-3" style={{ backgroundColor: '#00264a' }}>
+    <div
+      class="container"
+      style={{
+        color: 'white',
+        fontSize: '14px',
+      }}
+    >
+      <div class="outter-wrapper">
+        <div class="supporter-title">
+          {t('Supported by')}
+        </div>
+        <div class="logos">
+          <div class="single-logo">
+            <Supporter
+              url="https://www.ernst-goehner-stiftung.ch"
+              src={EGS}
+              alt="Ernst Göhner Stiftung"
+            />
+          </div>
+          <Supporter
+            url="https://www.grstiftung.ch/en.html"
+            src={GRS}
+            alt="Gebert Rüf Stiftung"
+          />
+          <Supporter
+            url="https://www.education21.ch/fr"
+            src={education21}
+            alt="Éducation 21"
+          />
+          <Supporter
+            url="https://www.epfl.ch/"
+            src={epfl}
+            alt="École Polytechnique Fédérale de Lausanne"
+          />
+          <Supporter
+            url="https://www.hepl.ch/accueil.html"
+            src={hep}
+            alt="Haute École Pédagogique Vaud"
+          />
+        </div>
+        <div class="copyright">
+          © {t('Copyright')}
+          <a
+            class="graasp-link"
+            href="https://graasp.org"
+            target="_blank"
+            rel="noreferrer"
+          >
+            graasp.org
+          </a>
+          {new Date().getFullYear()}
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<style>
+  .outter-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .supporter-title {
+    align-self: flex-start;
+    font-weight: 900;
+  }
+
+  .logos {
+    display: flex;
+    row-gap: 32px;
+    column-gap: 18px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .single-logo {
+    width: 100%;
+  }
+
+  .copyright {
+    display: flex;
+    gap: 0.2em;
+    align-self: flex-end;
+  }
+
+  .graasp-link {
+    color: rgb(228, 228, 228);
+  }
+</style>
