@@ -1,6 +1,6 @@
 ---
 import { getLangFromUrl, useTranslations } from '../../i18n/utils';
-import ServiceItem from '../ServiceItem';
+import ServiceItem from '../ServiceItem.astro';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -16,7 +16,7 @@ const qs = `?lang=${lang}`;
 >
   <div class="container">
     <div class="flexbox" style={{ display: 'flex', alignItems: 'center' }}>
-      <h1 class="text-center my-5">{t('Simulations')}</h1>
+      <h2 class="text-center my-5">{t('Simulations')}</h2>
       <div
         class="row"
         style={{

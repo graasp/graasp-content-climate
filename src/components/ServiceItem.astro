@@ -1,0 +1,58 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  web: string;
+  github: string;
+}
+const { title, description, web, github } = Astro.props;
+
+import { Image } from 'astro:assets';
+
+import AiFillGithub from '../images/github_icon.svg';
+import BiWorld from '../images/link_icon.svg';
+---
+
+<div class="col-lg-3 my-4 col-sm-12" style={{ textAlign: 'center' }}>
+  <h3>
+    <a href={web} class="appTitle" target="_blank" rel="noreferrer noopener">
+      {title}
+    </a>
+  </h3>
+  <p style={{ color: 'white' }}>{description}</p>
+  <div>
+    <a href={web} style={{ color: 'white' }} target="_blank" rel="noreferrer">
+      <Image
+        alt={`${title} link`}
+        src={BiWorld}
+        width={24}
+        style={{ marginRight: '2.5px' }}
+      />
+    </a>
+    <a
+      href={github}
+      style={{ color: 'white' }}
+      target="_blank"
+      rel="noreferrer"
+    >
+      <Image
+        alt={`${title} github link`}
+        src={AiFillGithub}
+        width={24}
+        style={{ marginLeft: '2.5px' }}
+      />
+    </a>
+  </div>
+</div>
+
+<style>
+  .appTitle {
+    color: #d6f0d2;
+    text-decoration: none;
+  }
+
+  .appTitle:hover {
+    color: #7e9fb5;
+    text-decoration: none;
+  }
+</style>

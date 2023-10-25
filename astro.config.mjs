@@ -1,6 +1,5 @@
+import partytown from '@astrojs/partytown';
 import { defineConfig } from 'astro/config';
-import react from '@astrojs/react';
-import partytown from "@astrojs/partytown";
 
 // https://astro.build/config
 export default defineConfig({
@@ -8,12 +7,8 @@ export default defineConfig({
     partytown({
       // Adds dataLayer.push as a forwarding-event.
       config: {
-        forward: ["dataLayer.push"],
+        forward: ['dataLayer.push'],
       },
     }),
-    react(),
-    //     {
-    //   include: ['**/react/*'],
-    // }
   ],
 });

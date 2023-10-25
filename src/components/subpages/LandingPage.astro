@@ -4,35 +4,20 @@ import Navbar from '../Navbar.astro';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
-
-const pageStyle = {
-  backgroundImage:
-    'url(https://images.unsplash.com/photo-1476546516825-6c911f1059e7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80)',
-  backgroundSize: 'cover',
-  backgroundRepeat: 'no-repeat',
-  backgroundPosition: 'center',
-  color: 'white',
-  backgroundColor: 'rgba(0, 0, 0, 0.6)',
-  backgroundBlendMode: 'multiply',
-};
 ---
 
-<section
-  id="home"
-  style={{ height: '100%', ...pageStyle }}
-  class="container-fluid"
->
+<section id="home" class="home container-fluid">
   <div class="container">
     <Navbar />
     <div class="centerItems">
-      <h1 style={{ color: '#DCDCDC' }} class="landing-page-text">
+      <h1 class="landing-page-text">
         {
           t(
             'Active learning simulations for investigating the science of global warming',
           )
         }
       </h1>
-      <p style={{ marginTop: '20px', fontSize: '20px' }}>
+      <p class="description">
         {
           t(
             'Based on climate education research • Adapted for middle and high schools • Tested in classrooms • Easily embedded in Graasp activities and other web platforms',
@@ -42,3 +27,31 @@ const pageStyle = {
     </div>
   </div>
 </section>
+
+<style>
+  .home {
+    height: 100%;
+    background-image: url(https://images.unsplash.com/photo-1476546516825-6c911f1059e7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: multiply;
+  }
+
+  .landing-page-text {
+    color: #dcdcdc;
+  }
+
+  .description {
+    margin-top: 20px;
+    font-size: 20px;
+  }
+
+  @media screen and (max-width: 500px) {
+    .landing-page-text {
+      font-size: 30px;
+    }
+  }
+</style>

@@ -1,8 +1,8 @@
 ---
-import logo from '../images/logo.png';
+import graaspLogo from '../images/graasp.svg';
 import LanguagePicker from './LanguagePicker.astro';
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
-
+import { Image } from 'astro:assets';
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
@@ -10,7 +10,7 @@ const t = useTranslations(lang);
 <div class="pos-f-t" style={{ marginBottom: 10 }}>
   <nav class="navbar navbar-dark navbar-expand-md">
     <div class="logo-container">
-      <img src={logo.src} alt="Graasp Climate logo" class="logo" />
+      <Image class="logo" src={graaspLogo} alt="Graasp Climate logo" />
       <h4 class="logo-text">GRAASP CLIMATE</h4>
     </div>
     <button
@@ -53,3 +53,11 @@ const t = useTranslations(lang);
     </div>
   </nav>
 </div>
+
+<style>
+  .logo {
+    width: 175px;
+    height: auto;
+    padding: 16px;
+  }
+</style>

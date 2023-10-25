@@ -1,7 +1,8 @@
 ---
-import iybssdLogoFr from '../../images/Logo-IYBSSD-FR.png';
-import iybssdLogo from '../../images/Logo-IYBSSD-English.png';
+import iybssdLogoFr from '../../images/Logo-IYBSSD-small-FR.png';
+import iybssdLogo from '../../images/Logo-IYBSSD-small-EN.png';
 import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+import { Image } from 'astro:assets';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -19,12 +20,14 @@ const t = useTranslations(lang);
     gap: '20px',
   }}
 >
-  <div class="my-4">
+  <div class="my-4" style={{ width: '100px', height: 'auto' }}>
     {
-      lang === 'fr' ? (
-        <img src={iybssdLogoFr.src} alt="IYBSSD logo" class="iybssd-logo" />
-      ) : (
-        <img src={iybssdLogo.src} alt="IYBSSD logo" class="iybssd-logo" />
+      (
+        <Image
+          src={lang === 'fr' ? iybssdLogoFr : iybssdLogo}
+          alt="IYBSSD logo"
+          style={{ width: '100px', height: 'auto' }}
+        />
       )
     }
   </div>

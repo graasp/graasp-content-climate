@@ -1,6 +1,7 @@
 ---
-import equipeImage from '../../images/team.jpg';
+import equipeImage from '../../images/team-reduced.jpg';
 import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+import { Image } from 'astro:assets';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -72,7 +73,11 @@ const t = useTranslations(lang);
         </a>
          .
       </div>
-      <img src={equipeImage.src} alt="Team photo" />
+      <Image
+        style={{ maxWidth: '100%', height: 'auto' }}
+        src={equipeImage}
+        alt="Team photo"
+      />
       <div
         style={{ marginBottom: '50px', fontSize: '0.9em', fontStyle: 'italic' }}
       >
@@ -85,3 +90,9 @@ const t = useTranslations(lang);
     </div>
   </div>
 </div>
+
+<style>
+  a {
+    color: #316818;
+  }
+</style>

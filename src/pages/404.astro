@@ -3,10 +3,44 @@ import { getLangFromUrl, useTranslations } from '../i18n/utils';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
-
-Astro.redirect('/'+lang);
 ---
 
-<div>
-  <h1>{t('Page Not Found')}</h1>
+<div class="page">
+  <div class="wrapper">
+    <h1 class="not-found">{t('Page Not Found')}</h1>
+    <a href="/" class="home-button">Go home</a>
+  </div>
 </div>
+
+<style>
+  .page {
+    display: flex;
+    place-items: center;
+    width: 100vw;
+    height: 100vh;
+  }
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 24px 48px;
+    border-radius: 8px;
+    background-color: aliceblue;
+    place-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .not-found {
+    color: skyblue;
+  }
+
+  .home-button {
+    border-radius: 8px;
+    background-color: skyblue;
+    padding: 12px 24px;
+    text-decoration: unset;
+    color: white;
+  }
+</style>

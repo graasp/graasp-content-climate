@@ -1,6 +1,7 @@
 ---
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
 import 'bootstrap/dist/css/bootstrap.css';
+import graaspLogo from '../images/graasp.svg';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -26,18 +27,13 @@ const GA_MEASUREMENT_ID = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
   <head>
     <meta charset="UTF-8" />
 
-    <meta name="description" content="Astro description" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="icon" type="xml/svg" href={graaspLogo.src} />
     <title>{title}</title>
     <meta name="description" content={description} />
     <meta name="author" content={author} />
     <meta name="keywords" content={keywords.join(',')} />
 
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=1"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
@@ -55,7 +51,6 @@ const GA_MEASUREMENT_ID = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
       gtag('js', new Date());
       gtag('config', GA_MEASUREMENT_ID);
     </script>
-
   </head>
   <body>
     <slot />
@@ -77,16 +72,5 @@ const GA_MEASUREMENT_ID = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
     font-family: system-ui, sans-serif;
     background: #13151a;
     background-size: 224px;
-  }
-  code {
-    font-family:
-      Menlo,
-      Monaco,
-      Lucida Console,
-      Liberation Mono,
-      DejaVu Sans Mono,
-      Bitstream Vera Sans Mono,
-      Courier New,
-      monospace;
   }
 </style>

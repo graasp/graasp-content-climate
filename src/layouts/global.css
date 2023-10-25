@@ -48,16 +48,6 @@ footer {
   color: #b9a4de;
 }
 
-.appTitle {
-  color: #88a8be;
-  text-decoration: none;
-}
-
-.appTitle:hover {
-  color: #566d7c;
-  text-decoration: none;
-}
-
 .logo-container {
   display: flex;
   align-items: center;
@@ -67,20 +57,6 @@ footer {
   color: #cdc3f3;
   font-weight: 600;
   letter-spacing: 0.1em;
-}
-
-.logo {
-  width: 175px;
-}
-
-.iybssd-logo {
-  width: 100px;
-}
-
-@media screen and (max-width: 500px) {
-  .landing-page-text {
-    font-size: 30px;
-  }
 }
 
 @media screen and (max-width: 766px) {
