@@ -5,21 +5,22 @@ interface Props {
   url: string;
   alt: string;
   src: ImageMetadata;
+  height?: string;
 }
-const { url, alt, src } = Astro.props;
+const { url, alt, src, height } = Astro.props;
 ---
 
 <a href={url} target="_blank" rel="noreferrer">
   <Image class="image" src={src} alt={alt} />
 </a>
 
-<style>
+<style define:vars={{ height: height ?? '40px' }}>
   a {
-    max-height: 40px;
+    max-height: var(--height);
   }
   .image {
     width: 100%;
     height: auto;
-    max-height: 40px;
+    max-height: var(--height);
   }
 </style>
