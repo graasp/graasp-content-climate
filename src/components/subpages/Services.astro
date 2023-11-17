@@ -1,4 +1,5 @@
 ---
+import { defaultLang } from '../../i18n/ui';
 import { getLangFromUrl, useTranslations } from '../../i18n/utils';
 import ServiceItem from '../ServiceItem.astro';
 
@@ -7,6 +8,11 @@ const t = useTranslations(lang);
 
 // item id is necessary for standalone preview
 const qs = `?lang=${lang}`;
+
+const tutorialLink =
+  lang !== defaultLang
+    ? 'https://library.graasp.org/collections/7d4f9674-48b4-4763-b47a-4c51db206414'
+    : 'https://library.graasp.org/collections/563b7ff9-1941-4d0d-b250-5527eae7d37f';
 ---
 
 <div
@@ -54,7 +60,13 @@ const qs = `?lang=${lang}`;
           github="https://github.com/graasp/graasp-app-greenhouse-effect"
         />
       </div>
-      <p style={{ fontSize: 12, marginTop: 24 }}>
+
+      <p class="text-wrapper">
+        <a class="simulation-button" target="_blank" href={tutorialLink}
+          >{t('Brief tutorial of the simulations')}</a
+        >
+      </p>
+      <p class="text-wrapper">
         {
           t(
             '* Recommended pedagogical prerequisites: Concepts of electric charges, atoms, molecules, energy, and power',
@@ -64,3 +76,20 @@ const qs = `?lang=${lang}`;
     </div>
   </div>
 </div>
+
+<style>
+  .simulation-button {
+    border-radius: 8px;
+    background-color: green;
+    padding: 12px 24px;
+    text-decoration: unset;
+    color: white;
+
+    &:hover {
+      background-color: darkolivegreen;
+    }
+  }
+  .text-wrapper {
+    margin: 20px 0;
+  }
+</style>
