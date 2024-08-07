@@ -1,0 +1,38 @@
+---
+import { defaultLang } from '../../i18n/ui';
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+// item id is necessary for standalone preview
+const qs = `?lang=${lang}`;
+---
+
+<div
+  id="services"
+  class="container-fluid"
+  style={{ backgroundColor: '#82bee5', opacity: '0.7', color: 'white' }}
+>
+  <div class="container">
+    <div class="flexbox" style={{ display: 'flex', alignItems: 'center' }}>
+      <h2 class="text-center my-5">{t('CHEMISTRY_SIMULATIONS_TITLE')}</h2>
+      <div
+        class="row"
+        style={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          width: '105%',
+        }}
+      >
+        Coming soon...
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .text-wrapper {
+      margin: 20px 0;
+    }
+  </style>
+</div>

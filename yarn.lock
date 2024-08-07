@@ -1955,6 +1955,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"astro-navbar@npm:2.3.3":
+  version: 2.3.3
+  resolution: "astro-navbar@npm:2.3.3"
+  checksum: 063ae6559efc62279ac2c3d34c67286c2b4804d5bdd2efad73202bd28e54a7b428101fce33edcac7981b47309c18523680165d70e02aeec1f2c1cbafa20685ae
+  languageName: node
+  linkType: hard
+
 "astro@npm:^3.1.4":
   version: 3.1.4
   resolution: "astro@npm:3.1.4"
@@ -4119,6 +4126,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": 6.7.3
     "@typescript-eslint/parser": 6.7.3
     astro: ^3.1.4
+    astro-navbar: 2.3.3
     bootstrap: 5.3.2
     eslint: ^8.47.0
     eslint-config-airbnb: 19.0.4

@@ -1,0 +1,18 @@
+---
+const { roles, name, img } = Astro.props;
+import { Image } from 'astro:assets';
+---
+
+<div class="text-center px-2">
+  <!-- class="rounded-full aspect-square" -->
+  <img
+    class="rounded-circle ratio ratio-1x1 my-2"
+    alt={name}
+    src={img.src}
+    width="100"
+  />
+  <h5 class="font-weight-bold">{name}</h5>
+  <div class="text-muted" style={{ fontSize: '14px' }}>
+    {roles.map((r) => <div>{r}</div>)}
+  </div>
+</div>

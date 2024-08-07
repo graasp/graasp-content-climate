@@ -1,0 +1,112 @@
+---
+import { getLangFromUrl, useTranslations } from '../../../i18n/utils';
+import TeamMember from './TeamMember.astro';
+import PK from '../../../images/philippe_kobel.png';
+import BM from '../../../images/beatrice_mandanis.jpeg';
+import SP from '../../../images/stephanie_prior.jpg';
+import RP from '../../../images/robert_perez.jpg';
+import SG from '../../../images/stephane_goyette.jpeg';
+import TG from '../../../images/thierry_gerez.jpeg';
+import KP from '../../../images/kim.webp';
+import HT from '../../../images/hagop.webp';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<div
+  id="team"
+  class="container-fluid pb-5"
+  style={{ backgroundColor: '#c7f1bf' }}
+>
+  <div class="container">
+    <div class="flexbox">
+      <h1 class="text-center my-4">{t('Team')}</h1>
+      <div class="my-5">
+        <p>
+          {t('TEAM_DESCRIPTION')}
+        </p>
+        <p>
+          {t('TEAM_ACKNOLEDGEMENTS')}
+        </p>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col col-sm-4 col-lg-3 col-xl-2">
+            <TeamMember
+              img={PK}
+              name="Philippe Kobel"
+              roles={[
+                'Coordinateur',
+                'Enseignant de physique',
+                'Gymnase du Bugnon',
+              ]}
+            />
+          </div>
+          <div class="col col-sm-4 col-lg-3 col-xl-2">
+            <TeamMember
+              img={KP}
+              name="Kim Lan Phan Hoang"
+              roles={['Développeuse	', 'Graasp Association']}
+            />
+          </div>
+          <div class="col col-sm-4 col-lg-3 col-xl-2">
+            <TeamMember
+              img={HT}
+              name="Hagop Taminian"
+              roles={['Développeur', 'Graasp Association']}
+            />
+          </div>
+          <div class="col col-sm-4 col-lg-3 col-xl-2">
+            <TeamMember
+              img={SP}
+              name="Stéphanie Prior"
+              roles={['Enseignante de Chimie', 'Gymnase du Bugnon']}
+            />
+          </div>
+          <div class="col col-sm-4 col-lg-3 col-xl-2">
+            <TeamMember
+              img={RP}
+              name="Robert Perez"
+              roles={['Enseignant de Chimie', 'Gymnase du Bugnon']}
+            />
+          </div>
+          <div class="col col-sm-4 col-lg-3 col-xl-2">
+            <TeamMember
+              img={TG}
+              name="Thierry Gerez"
+              roles={['Enseignant de Chimie']}
+            />
+          </div>
+          <div class="col col-sm-4 col-lg-3 col-xl-2">
+            <TeamMember
+              img={BM}
+              name="Béatrice Mandanis"
+              roles={['Enseignante de Chimie', 'Gymnase de Provence']}
+            />
+          </div>
+          <div class="col col-sm-4 col-lg-3 col-xl-2">
+            <TeamMember
+              img={SG}
+              name="Stéphane Goyette"
+              roles={['Conseiller scientifique']}
+            />
+          </div>
+          <div class="col col-sm-4 col-lg-3 col-xl-2">
+            <TeamMember
+              img={SG}
+              name="Yves Debernardi"
+              roles={['Conseiller pédagogique']}
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  a {
+    color: #316818;
+  }
+</style>
