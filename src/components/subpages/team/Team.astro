@@ -7,6 +7,7 @@ import SP from '../../../images/stephanie_prior.jpg';
 import RP from '../../../images/robert_perez.jpg';
 import SG from '../../../images/stephane_goyette.jpeg';
 import TG from '../../../images/thierry_gerez.jpeg';
+import YD from '../../../images/yves_debernardi.jpeg';
 import KP from '../../../images/kim.webp';
 import HT from '../../../images/hagop.webp';
 
@@ -37,8 +38,8 @@ const t = useTranslations(lang);
               img={PK}
               name="Philippe Kobel"
               roles={[
-                'Coordinateur',
-                'Enseignant de physique',
+                t('COORDINATOR'),
+                t('PHYSICS_TEACHER_MALE'),
                 'Gymnase du Bugnon',
               ]}
             />
@@ -46,57 +47,57 @@ const t = useTranslations(lang);
           <div class="col col-sm-4 col-lg-3 col-xl-2">
             <TeamMember
               img={KP}
-              name="Kim Lan Phan Hoang"
-              roles={['Développeuse	', 'Graasp Association']}
+              name="Kim Phan"
+              roles={[t('DEVELOPER_FEMALE'), 'Graasp Association']}
             />
           </div>
           <div class="col col-sm-4 col-lg-3 col-xl-2">
             <TeamMember
               img={HT}
               name="Hagop Taminian"
-              roles={['Développeur', 'Graasp Association']}
+              roles={[t('DEVELOPER_MALE'), 'Graasp Association']}
             />
           </div>
           <div class="col col-sm-4 col-lg-3 col-xl-2">
             <TeamMember
               img={SP}
               name="Stéphanie Prior"
-              roles={['Enseignante de Chimie', 'Gymnase du Bugnon']}
+              roles={[t('CHEMISTRY_TEACHER_FEMALE'), 'Gymnase du Bugnon']}
             />
           </div>
           <div class="col col-sm-4 col-lg-3 col-xl-2">
             <TeamMember
               img={RP}
               name="Robert Perez"
-              roles={['Enseignant de Chimie', 'Gymnase du Bugnon']}
+              roles={[t('CHEMISTRY_TEACHER_MALE'), 'Gymnase du Bugnon']}
             />
           </div>
           <div class="col col-sm-4 col-lg-3 col-xl-2">
             <TeamMember
               img={TG}
               name="Thierry Gerez"
-              roles={['Enseignant de Chimie']}
+              roles={[t('CHEMISTRY_TEACHER_MALE')]}
             />
           </div>
           <div class="col col-sm-4 col-lg-3 col-xl-2">
             <TeamMember
               img={BM}
               name="Béatrice Mandanis"
-              roles={['Enseignante de Chimie', 'Gymnase de Provence']}
+              roles={[t('CHEMISTRY_TEACHER_FEMALE'), 'stepha']}
             />
           </div>
           <div class="col col-sm-4 col-lg-3 col-xl-2">
             <TeamMember
               img={SG}
               name="Stéphane Goyette"
-              roles={['Conseiller scientifique']}
+              roles={[t('SCIENTIFIC_ADVISOR')]}
             />
           </div>
           <div class="col col-sm-4 col-lg-3 col-xl-2">
             <TeamMember
-              img={SG}
+              img={YD}
               name="Yves Debernardi"
-              roles={['Conseiller pédagogique']}
+              roles={[t('PEDAGOGICAL_ADVISOR')]}
             />
           </div>
         </div>

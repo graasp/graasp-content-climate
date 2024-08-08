@@ -36,5 +36,14 @@
   "SEND_EMAIL_BUTTON": "Nous envoyer un email",
   "CONTACT_FORM_TEXT": "Nous serons ravis de d'avoir vos avis et suggestions concernant l'utilisation des simulations. Cela sera du grande aide pour des améliorations futures. Envoyez-nous un email, nous vous répondrons en quelques jours.",
   "TEAM_DESCRIPTION": "Graasp Climate est une collaboration entre enseignants de divers écoles secondaires suisses, l'association Graasp ainsi que des conseillers scientifiques et pédagogiques. ",
-  "TEAM_ACKNOLEDGEMENTS": "Un remerciement particulier aux chercheurs qui nous ont aidés par leurs précieuses contributions (Prof. D. Archer, U Colorado, Prof. A. Ohmura, ETHZ, Prof. Natalie Krivova, MPS, Prof. Michael Petterson, U Auckland)."
+  "TEAM_ACKNOLEDGEMENTS": "Un remerciement particulier aux chercheurs qui nous ont aidés par leurs précieuses contributions (Prof. D. Archer, U Colorado, Prof. A. Ohmura, ETHZ, Prof. Natalie Krivova, MPS, Prof. Michael Petterson, U Auckland).",
+  "COORDINATOR": "Coordinateur",
+  "PHYSICS_TEACHER_MALE": "Enseignant de physique",
+  "PHYSICS_TEACHER_FEMALE": "Enseignante de physique",
+  "CHEMISTRY_TEACHER_MALE": "Enseignant de chimie",
+  "CHEMISTRY_TEACHER_FEMALE": "Enseignante de chimie",
+  "DEVELOPER_MALE": "Développeur",
+  "DEVELOPER_FEMALE": "Développeuse",
+  "SCIENTIFIC_ADVISOR": "Conseiller scientifique",
+  "EDUCATION_ADVISOR": "Conseiller pédagogique"
 }
