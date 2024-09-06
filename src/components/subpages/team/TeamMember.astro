@@ -1,6 +1,13 @@
 ---
+import type { ImageMetadata } from 'astro';
+
+interface Props {
+  roles: string[];
+  name: string;
+  img: ImageMetadata;
+}
+
 const { roles, name, img } = Astro.props;
-import { Image } from 'astro:assets';
 ---
 
 <div class="text-center px-2">
