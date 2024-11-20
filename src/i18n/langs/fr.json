@@ -14,7 +14,7 @@
   "OSCILLATING_CHARGE_DESCRIPTION": "Ondes électromagnétiques à différentes longueurs d'onde UV, VIS, IR",
   "Thermal radiation": "Rayonnement thermique",
   "THERMAL_RADIATION_DESCRIPTION": "Ondes IR émises par une surface planétaire",
-  "Radiation absorption": "Absorption de rayonnement",
+  "GREENHOUSE_EFFECT_TITLE": "Effet de serre",
   "RADIATION_ABSORPTION_DESCRIPTION": "Interaction entre rayonnement et molécules de gaz atmosphérique",
   "* Recommended pedagogical prerequisites: Concepts of electric charges, atoms, molecules, energy, and power": "* Prérequis pédagogiques recommandés: Concepts sur les charges électriques, atomes, molécules, énergie et puissance",
   "team.text": "Les simulations ont été conçues et validées par <2>Philippe Kobel</2> et <6>Thierry Gerez</6>, (enseignants de physique et chimie au Gymnase du Bugnon), avec la collaboration scientifique de <10>Stéphane Goyette</10> (Université de Genève) et le conseil didactique de Yves Debernardi et <14>Nicolas Perrin</14>. (Haute école pédagogique Vaud). La conception de l’interaction et le développement ont été réalisés par <18>Kim Lan Phan Hoang</18> et <22>Hagop Taminian</22> à l'EPFL (École Polytechnique Fédérale de Lausanne) au sein du Groupe de <26>Denis Gillet</26>, puis consolidés en collaboration avec l'Association <30>Graasp.org.</30>",
