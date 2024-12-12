@@ -13,20 +13,22 @@ const t = useTranslations(lang);
       <Image class="logo" src={graaspLogo} alt="Graasp Climate logo" />
       <h4 class="logo-text">GRAASP CLIMATE</h4>
     </div>
+
     <button
       class="navbar-toggler"
       type="button"
-      data-toggle="collapse"
-      data-target="#collapsingNavbarSm"
-      aria-controls="navbarToggleExternalContent"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
       aria-expanded="false"
       aria-label="Toggle navigation"
     >
       <span class="navbar-toggler-icon"></span>
     </button>
+
     <div
       class="navbar-collapse collapse justify-content-end"
-      id="collapsingNavbarSm"
+      id="navbarSupportedContent"
     >
       <div class="p-4">
         <ul class="navbar-nav">
@@ -36,8 +38,8 @@ const t = useTranslations(lang);
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#services">
-              {t('Simulations')}
+            <a class="nav-link" href="#physics">
+              {t('PHYSICS_SIMULATIONS_TITLE')}
             </a>
           </li>
           <li class="nav-item">

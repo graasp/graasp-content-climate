@@ -7,7 +7,7 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
 const title = 'Graasp Climate';
-const description = t(`meta.description`);
+const description = t(`TITLE`);
 const author = `Graasp`;
 const keywords = [
   t('education'),
@@ -43,6 +43,10 @@ const GA_MEASUREMENT_ID = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
       type="text/partytown"
       src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
     ></script>
+    <script>
+      // library for mobile menu to open
+      import 'bootstrap/js/dist/collapse.js';
+    </script>
     <script type="text/partytown" define:vars={{ GA_MEASUREMENT_ID }}>
       window.dataLayer = window.dataLayer || [];
       function gtag() {

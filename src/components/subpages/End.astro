@@ -7,26 +7,19 @@ const t = useTranslations(lang);
 
 <div
   class="container-fluid"
-  style={{ backgroundColor: '#cbe6ef', color: 'white', paddingBottom: 30 }}
+  style={{ backgroundColor: '#cbe6ef', paddingBottom: 30 }}
 >
   <div class="container">
     <div class="flexbox">
       <h1 class="text-center my-5" style={{ color: 'black' }}>
         {t('Contact us')}
       </h1>
-      <div class="row my-4">
-        <div class="col-lg-6 mb-4">
-          <input type="text" class="inputBox" placeholder={t('Your Name')} />
-        </div>
-        <div class="col-lg-6 mb-4">
-          <input type="email" class="inputBox" placeholder={t('Your Email')} />
-        </div>
-      </div>
-      <textarea rows="2" class="inputBox mb-4" placeholder={t('Your Message')}
-      ></textarea>
-      <button class="btn btn-light mb-4 py-3" type="submit">
-        {t('Submit')}
-      </button>
+      {t('CONTACT_FORM_TEXT')}
+      <a class="text-center mt-3" href="mailto:philippe.kobel@gmail.com">
+        <button class="btn btn-light mb-4 py-3" type="submit">
+          {t('SEND_EMAIL_BUTTON')}
+        </button></a
+      >
     </div>
   </div>
 </div>

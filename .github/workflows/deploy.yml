@@ -3,7 +3,7 @@ name: Deploy
 on:
   push:
     branches:
-      - "main"
+      - 'main'
 
   workflow_dispatch:
 
@@ -33,6 +33,6 @@ jobs:
           build-folder: 'dist'
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID_PROD }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY_PROD }}
-          aws-region: ${{ secrets.AWS_REGION_PROD }}
+          aws-region: ${{ vars.AWS_REGION }}
           aws-s3-bucket-name: ${{ secrets.AWS_S3_BUCKET_NAME }}
           cloudfront-distribution-id: ${{ secrets.CLOUDFRONT_DISTRIBUTION }}
