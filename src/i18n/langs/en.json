@@ -9,9 +9,9 @@
   "PHYSICS_SIMULATIONS_TITLE": "Simulations",
   "Team": "Team",
   "TITLE": "Simulations and numerical activities to teach global warming in basic sciences",
-  "Oscillating charge": "Oscillating charge",
+  "Oscillating charge": "Oscillating Charge",
   "OSCILLATING_CHARGE_DESCRIPTION": "Electromagnetic waves at various wavelengths in UV, VIS, IR",
-  "Thermal radiation": "Thermal radiation",
+  "Thermal radiation": "Thermal Radiation",
   "THERMAL_RADIATION_DESCRIPTION": "IR waves emitted by a planetary surface",
   "GREENHOUSE_EFFECT_TITLE": "Greenhouse Effect",
   "RADIATION_ABSORPTION_DESCRIPTION": "Interaction between radiation and atmospheric gas molecules",
@@ -44,5 +44,7 @@
   "DEVELOPER_MALE": "Developer",
   "DEVELOPER_FEMALE": "Developer",
   "SCIENTIFIC_ADVISOR": "Scientific advisor",
-  "PEDAGOGICAL_ADVISOR": "Pedagogical advisor"
+  "PEDAGOGICAL_ADVISOR": "Pedagogical advisor",
+  "OCEAN_ACIDIFICATION_TITLE": "Ocean Acidification",
+  "OCEAN_ACIDIFICATION_DESCRIPTION": "Diffusion of CO2 and chain of reactions"
 }

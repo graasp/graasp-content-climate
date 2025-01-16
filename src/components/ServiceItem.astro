@@ -4,8 +4,9 @@ interface Props {
   description: string;
   web: string;
   github: string;
+  thumbnailSrc: string;
 }
-const { title, description, web, github } = Astro.props;
+const { title, description, web, github, thumbnailSrc } = Astro.props;
 
 import { Image } from 'astro:assets';
 
@@ -13,35 +14,81 @@ import AiFillGithub from '../images/github_icon.svg';
 import BiWorld from '../images/link_icon.svg';
 ---
 
-<div class="col-lg-3 my-4 col-sm-12" style={{ textAlign: 'center' }}>
-  <h3>
-    <a href={web} class="appTitle" target="_blank" rel="noreferrer noopener">
-      {title}
-    </a>
-  </h3>
-  <p style={{ color: 'white' }}>{description}</p>
-  <div>
-    <a href={web} style={{ color: 'white' }} target="_blank" rel="noreferrer">
-      <Image
+<div
+  class="col-xl-4 col-md-6 col-sm-12 p-3"
+  style={{
+    boxSizing: 'border-box',
+    textAlign: 'center',
+  }}
+>
+  <div
+    class="p-4 gap-2"
+    style={{
+      width: '100%',
+      boxSizing: 'border-box',
+      background: 'green',
+      height: '100%',
+      borderRadius: '20px',
+      alignItems: 'center',
+      display: 'flex',
+      justifyContent: 'center',
+    }}
+  >
+    <div>
+      <img
+        class="mb-2"
         alt={`${title} link`}
-        src={BiWorld}
-        width={24}
-        style={{ marginRight: '2.5px' }}
+        src={thumbnailSrc}
+        width={100}
+        height={100}
+        style={{
+          borderRadius: '15px',
+          objectFit: 'cover',
+          objectPosition: '20% 0',
+        }}
       />
-    </a>
-    <a
-      href={github}
-      style={{ color: 'white' }}
-      target="_blank"
-      rel="noreferrer"
-    >
-      <Image
-        alt={`${title} github link`}
-        src={AiFillGithub}
-        width={24}
-        style={{ marginLeft: '2.5px' }}
-      />
-    </a>
+      <div>
+        <a
+          href={web}
+          style={{ color: 'white' }}
+          target="_blank"
+          rel="noreferrer"
+        >
+          <Image
+            alt={`${title} link`}
+            src={BiWorld}
+            width={24}
+            style={{ marginRight: '2.5px' }}
+          />
+        </a>
+        <a
+          href={github}
+          style={{ color: 'white' }}
+          target="_blank"
+          rel="noreferrer"
+        >
+          <Image
+            alt={`${title} github link`}
+            src={AiFillGithub}
+            width={24}
+            style={{ marginLeft: '2.5px' }}
+          />
+        </a>
+      </div>
+    </div>
+    <div>
+      <h3>
+        <a
+          href={web}
+          class="appTitle"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          {title}
+        </a>
+      </h3>
+      <p style={{ color: 'white' }}>{description}</p>
+    </div>
   </div>
 </div>
 
