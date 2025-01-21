@@ -2,6 +2,11 @@
 import { defaultLang } from '../../i18n/ui';
 import { getLangFromUrl, useTranslations } from '../../i18n/utils';
 import ServiceItem from '../ServiceItem.astro';
+import OA from '../../images/simulations/ocean-acidification.png';
+import OC from '../../images/simulations/oscillating-charge.png';
+import TR from '../../images/simulations/thermal-radiation.png';
+import RA from '../../images/simulations/radiation-absorption.png';
+import GM from '../../images/simulations/global-model.png';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -21,14 +26,15 @@ const tutorialLink =
   style={{ backgroundColor: '#035603', opacity: '0.7', color: 'white' }}
 >
   <div class="container">
-    <div class="flexbox" style={{ display: 'flex', alignItems: 'center' }}>
+    <div class="flexbox" style={{ alignItems: 'center' }}>
       <h2 class="text-center my-5">{t('PHYSICS_SIMULATIONS_TITLE')}</h2>
       <div
         class="row"
         style={{
+          width: '100%',
+          boxSizing: 'border-box',
           display: 'flex',
-          justifyContent: 'space-between',
-          width: '105%',
+          justifyContent: 'center',
         }}
       >
         <ServiceItem
@@ -36,24 +42,35 @@ const tutorialLink =
           description={t('OSCILLATING_CHARGE_DESCRIPTION')}
           web={`https://apps.graasp.org/4b63857b-1bd9-44cf-a72d-4fb7ff531b13/latest/index.html${qs}`}
           github="https://github.com/graasp/graasp-app-radiating-charge"
+          thumbnailSrc={OC.src}
         />
         <ServiceItem
           title={t('Thermal radiation')}
           description={t('THERMAL_RADIATION_DESCRIPTION')}
           web={`https://apps.graasp.org/ff4d50d9-1370-4707-a460-02a041474579/latest/index.html${qs}`}
           github="https://github.com/graasp/graasp-app-thermal-radiation"
+          thumbnailSrc={TR.src}
         />
         <ServiceItem
           title={t('GREENHOUSE_EFFECT_TITLE')}
           description={t('RADIATION_ABSORPTION_DESCRIPTION')}
           web={`https://apps.graasp.org/35288bda-d787-42f9-b5d6-110d689d0eda/latest/index.html${qs}`}
           github="https://github.com/graasp/graasp-app-radiation-absorption"
+          thumbnailSrc={RA.src}
         />
         <ServiceItem
           title={t('GLOBAL_MODEL_TITLE')}
           description={t('GLOBAL_MODEL_DESCRIPTION')}
           web={`https://apps.graasp.org/f61d6916-be33-4c63-b697-2c7b09a7b8e5/latest/index.html${qs}`}
           github="https://github.com/graasp/graasp-app-greenhouse-effect"
+          thumbnailSrc={GM.src}
+        />
+        <ServiceItem
+          title={t('OCEAN_ACIDIFICATION_TITLE')}
+          description={t('OCEAN_ACIDIFICATION_DESCRIPTION')}
+          web={`https://graasp.github.io/graasp-app-ocean-acidification${qs}`}
+          github="https://github.com/graasp/graasp-app-ocean-acidification"
+          thumbnailSrc={OA.src}
         />
       </div>
 

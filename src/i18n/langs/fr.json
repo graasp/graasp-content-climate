@@ -44,5 +44,7 @@
   "DEVELOPER_MALE": "Développeur",
   "DEVELOPER_FEMALE": "Développeuse",
   "SCIENTIFIC_ADVISOR": "Conseiller scientifique",
-  "EDUCATION_ADVISOR": "Conseiller pédagogique"
+  "EDUCATION_ADVISOR": "Conseiller pédagogique",
+  "OCEAN_ACIDIFICATION_TITLE": "Acidification des océans",
+  "OCEAN_ACIDIFICATION_DESCRIPTION": "Diffusion du CO2 et chaîne de réactions"
 }
