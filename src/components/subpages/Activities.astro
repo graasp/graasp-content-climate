@@ -1,0 +1,68 @@
+---
+import { defaultLang } from '../../i18n/ui';
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+import OA from '../../images/simulations/ocean-acidification.png';
+import GM from '../../images/activities/greenhouse.webp';
+import Activity from '../Activity.astro';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+// item id is necessary for standalone preview
+const qs = `?lang=${lang}`;
+
+const tutorialLink =
+  lang !== defaultLang
+    ? 'https://library.graasp.org/collections/7d4f9674-48b4-4763-b47a-4c51db206414'
+    : 'https://library.graasp.org/collections/563b7ff9-1941-4d0d-b250-5527eae7d37f';
+---
+
+<div
+  id="activities"
+  class="container-fluid pb-5"
+  style={{ backgroundColor: '#2d672d', color: 'white' }}
+>
+  <div class="container">
+    <div class="flexbox" style={{ alignItems: 'center' }}>
+      <h2 class="text-center mt-5">{t('ACTIVITIES_TITLE')}</h2>
+      <p class="text-center mb-5">{t('ACTIVITIES_DESCRIPTION')}</p>
+      <div
+        class="row"
+        style={{
+          width: '100%',
+          boxSizing: 'border-box',
+          display: 'flex',
+          justifyContent: 'center',
+        }}
+      >
+        <Activity
+          title={t('ACTIVITIES_GREENHOUSE_TITLE')}
+          url="https://library.graasp.org/collections/4baf6561-c264-45d8-89ea-b855537656b7"
+          thumbnailSrc={GM.src}
+        />
+        <Activity
+          title={t('ACTIVITIES_ACIDIFICATION_TITLE')}
+          url="https://github.com/graasp/graasp-app-ocean-acidification"
+          thumbnailSrc={OA.src}
+        />
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .simulation-button {
+      border-radius: 8px;
+      background-color: green;
+      padding: 12px 24px;
+      text-decoration: unset;
+      color: white;
+
+      &:hover {
+        background-color: darkolivegreen;
+      }
+    }
+    .text-wrapper {
+      margin: 20px 0;
+    }
+  </style>
+</div>
