@@ -1,0 +1,71 @@
+---
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+import OA from '../../images/activities/ocean-acidification.jpeg';
+import GM from '../../images/activities/greenhouse.jpeg';
+import TGM from '../../images/activities/global_model.webp';
+import Activity from '../Activity.astro';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<div
+  id="activities"
+  class="container-fluid pb-5"
+  style={{ backgroundColor: '#2d672d', color: 'white' }}
+>
+  <div class="container">
+    <div class="flexbox" style={{ alignItems: 'center' }}>
+      <h2 class="text-center mt-5">{t('ACTIVITIES_TITLE')}</h2>
+      <p class="text-center mb-5">{t('ACTIVITIES_DESCRIPTION')}</p>
+      <div
+        class="row"
+        style={{
+          width: '100%',
+          boxSizing: 'border-box',
+          display: 'flex',
+          justifyContent: 'center',
+        }}
+      >
+        <Activity
+          title={t('ACTIVITIES_GREENHOUSE_TITLE')}
+          url={lang === 'en'
+            ? 'https://library.graasp.org/collections/86281673-76cf-4af0-a09d-86c287ed0e6b'
+            : 'https://library.graasp.org/collections/4baf6561-c264-45d8-89ea-b855537656b7'}
+          thumbnailSrc={GM.src}
+        />
+        <Activity
+          title={t('ACTIVITIES_GLOBAL_MODEL_TITLE')}
+          url={lang === 'en'
+            ? 'https://library.graasp.org/collections/5fc87751-e6e7-4aaf-9611-7571e9e37f8c'
+            : 'https://library.graasp.org/collections/cb91101e-4547-4390-a84c-a4b1f09b05aa'}
+          thumbnailSrc={TGM.src}
+        />
+        <Activity
+          title={t('ACTIVITIES_ACIDIFICATION_TITLE')}
+          url={lang === 'en'
+            ? 'https://library.graasp.org/collections/0584c2fb-4a1b-4842-9c7b-39b93a246e91'
+            : 'https://library.graasp.org/collections/f1c74dc5-3710-4f11-937c-c143b9f3c40f'}
+          thumbnailSrc={OA.src}
+        />
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .simulation-button {
+      border-radius: 8px;
+      background-color: green;
+      padding: 12px 24px;
+      text-decoration: unset;
+      color: white;
+
+      &:hover {
+        background-color: darkolivegreen;
+      }
+    }
+    .text-wrapper {
+      margin: 20px 0;
+    }
+  </style>
+</div>
