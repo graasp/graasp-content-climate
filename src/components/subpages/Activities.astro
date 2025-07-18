@@ -7,14 +7,6 @@ import Activity from '../Activity.astro';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
-
-// item id is necessary for standalone preview
-// const qs = `?lang=${lang}`;
-
-// const tutorialLink =
-//   lang !== defaultLang
-//     ? 'https://library.graasp.org/collections/7d4f9674-48b4-4763-b47a-4c51db206414'
-//     : 'https://library.graasp.org/collections/563b7ff9-1941-4d0d-b250-5527eae7d37f';
 ---
 
 <div
