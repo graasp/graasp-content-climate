@@ -10,6 +10,8 @@ import TG from '../../../images/thierry_gerez.jpeg';
 import YD from '../../../images/yves_debernardi.jpeg';
 import KP from '../../../images/kim.webp';
 import HT from '../../../images/hagop.webp';
+import EC from '../../../images/enrica_cannizzaro.jpeg';
+import AV from '../../../images/annabelle_valtat.jpg';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -69,14 +71,14 @@ const t = useTranslations(lang);
             <TeamMember
               img={RP}
               name="Robert Perez"
-              roles={[t('CHEMISTRY_TEACHER_MALE')]}
+              roles={[t('CHEMISTRY_TEACHER_MALE'), 'Ecole Roche']}
             />
           </div>
           <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
             <TeamMember
               img={TG}
               name="Thierry Gerez"
-              roles={[t('CHEMISTRY_TEACHER_MALE')]}
+              roles={[t('CHEMISTRY_TEACHER_MALE'), 'Gymnase du Bugnon']}
             />
           </div>
           <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
@@ -88,16 +90,33 @@ const t = useTranslations(lang);
           </div>
           <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
             <TeamMember
+              img={AV}
+              name="Annabelle Valtat"
+              roles={[t('BIOLOGY_TEACHER_FEMALE'), "Gymnase d'Yverdon"]}
+            />
+          </div>
+          <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+            <TeamMember
+              img={EC}
+              name="Enrica Cannizzaro"
+              roles={[t('BIOLOGY_TEACHER_FEMALE'), 'Gymnase de Morges']}
+            />
+          </div>
+          <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+            <TeamMember
               img={SG}
               name="Stéphane Goyette"
-              roles={[t('SCIENTIFIC_ADVISOR')]}
+              roles={[t('SCIENTIFIC_ADVISOR'), 'Université de Genève']}
             />
           </div>
           <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
             <TeamMember
               img={YD}
               name="Yves Debernardi"
-              roles={[t('PEDAGOGICAL_ADVISOR')]}
+              roles={[
+                t('PEDAGOGICAL_ADVISOR'),
+                'Haute école pédagogique de Lausanne',
+              ]}
             />
           </div>
         </div>
