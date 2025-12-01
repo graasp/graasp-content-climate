@@ -5,13 +5,22 @@ interface Props {
   web: string;
   github: string;
   thumbnailSrc: string;
+  tutorialLinks: { fr: string; en: string };
 }
-const { title, description, web, github, thumbnailSrc } = Astro.props;
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
 
 import { Image } from 'astro:assets';
 
 import AiFillGithub from '../images/github_icon.svg';
 import BiWorld from '../images/link_icon.svg';
+
+const { title, description, web, github, thumbnailSrc, tutorialLinks } =
+  Astro.props;
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const tutorialUrl = lang === 'en' ? tutorialLinks.en : tutorialLinks.fr;
 ---
 
 <div
@@ -22,77 +31,101 @@ import BiWorld from '../images/link_icon.svg';
   }}
 >
   <div
-    class="p-3 gap-3"
+    class="p-4 pb-3"
     style={{
       width: '100%',
       boxSizing: 'border-box',
       background: 'green',
       height: '100%',
       borderRadius: '20px',
-      alignItems: 'center',
-      display: 'flex',
-      justifyContent: 'center',
     }}
   >
-    <div>
-      <img
-        class="mb-2"
-        alt={`${title} thumbnail`}
-        src={thumbnailSrc}
-        width={100}
-        height={100}
-        style={{
-          borderRadius: '15px',
-          objectFit: 'cover',
-          objectPosition: '20% 0',
-        }}
-      />
+    <div
+      class="gap-4"
+      style={{
+        alignItems: 'top',
+        display: 'flex',
+        justifyContent: 'center',
+      }}
+    >
       <div>
-        <a
-          href={web}
-          style={{ color: 'white' }}
-          target="_blank"
-          rel="noreferrer"
-        >
-          <Image
-            alt={`${title} link`}
-            src={BiWorld}
-            width={24}
-            style={{ marginRight: '2.5px' }}
-          />
-        </a>
-        <a
-          href={github}
-          style={{ color: 'white' }}
-          target="_blank"
-          rel="noreferrer"
-        >
-          <Image
-            alt={`${title} github link`}
-            src={AiFillGithub}
-            width={24}
-            style={{ marginLeft: '2.5px' }}
-          />
-        </a>
+        <img
+          class="mb-2"
+          alt={`${title} thumbnail`}
+          src={thumbnailSrc}
+          width={100}
+          height={100}
+          style={{
+            borderRadius: '15px',
+            objectFit: 'cover',
+            objectPosition: '20% 0',
+          }}
+        />
+        <div>
+          <a
+            href={web}
+            style={{ color: 'white' }}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Image
+              alt={`${title} link`}
+              src={BiWorld}
+              width={24}
+              style={{ marginRight: '2.5px' }}
+            />
+          </a>
+          <a
+            href={github}
+            style={{ color: 'white' }}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Image
+              alt={`${title} github link`}
+              src={AiFillGithub}
+              width={24}
+              style={{ marginLeft: '2.5px' }}
+            />
+          </a>
+        </div>
+      </div>
+      <div style={{ textAlign: 'left' }}>
+        <h4>
+          <a
+            href={web}
+            class="appTitle"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            {title}
+          </a>
+        </h4>
+        <p style={{ color: 'white' }}>{description}</p>
       </div>
     </div>
-    <div style={{ textAlign: 'left' }}>
-      <h3>
-        <a
-          href={web}
-          class="appTitle"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          {title}
-        </a>
-      </h3>
-      <p style={{ color: 'white' }}>{description}</p>
-    </div>
+    <p style={{ textAlign: 'right' }}>
+      <a class="simulation-button" target="_blank" href={tutorialUrl}
+        >{t('Tutorial')}</a
+      >
+    </p>
   </div>
 </div>
 
 <style>
+  .simulation-button {
+    border-radius: 8px;
+    border: lightgreen 1px solid;
+    padding: 8px 16px;
+    text-decoration: unset;
+    color: white;
+    transition: all 0.2s;
+
+    &:hover {
+      background: darkgreen;
+    }
+  }
+
   .appTitle {
     color: #d6f0d2;
     text-decoration: none;
