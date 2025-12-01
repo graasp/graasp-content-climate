@@ -13,11 +13,6 @@ const t = useTranslations(lang);
 
 // item id is necessary for standalone preview
 const qs = `?lang=${lang}`;
-
-const tutorialLink =
-  lang !== defaultLang
-    ? 'https://library.graasp.org/collections/7d4f9674-48b4-4763-b47a-4c51db206414'
-    : 'https://library.graasp.org/collections/563b7ff9-1941-4d0d-b250-5527eae7d37f';
 ---
 
 <div
@@ -43,6 +38,10 @@ const tutorialLink =
           web={`https://apps.graasp.org/4b63857b-1bd9-44cf-a72d-4fb7ff531b13/latest/index.html${qs}`}
           github="https://github.com/graasp/graasp-app-radiating-charge"
           thumbnailSrc={OC.src}
+          tutorialLinks={{
+            en: '/tutorials/oscillating_charge_en.pdf',
+            fr: '/tutorials/oscillating_charge_fr.pdf',
+          }}
         />
         <ServiceItem
           title={t('Thermal radiation')}
@@ -50,6 +49,10 @@ const tutorialLink =
           web={`https://apps.graasp.org/ff4d50d9-1370-4707-a460-02a041474579/latest/index.html${qs}`}
           github="https://github.com/graasp/graasp-app-thermal-radiation"
           thumbnailSrc={TR.src}
+          tutorialLinks={{
+            en: '/tutorials/thermal_radiation_en.pdf',
+            fr: '/tutorials/thermal_radiation_fr.pdf',
+          }}
         />
         <ServiceItem
           title={t('GREENHOUSE_EFFECT_TITLE')}
@@ -57,6 +60,10 @@ const tutorialLink =
           web={`https://apps.graasp.org/35288bda-d787-42f9-b5d6-110d689d0eda/latest/index.html${qs}`}
           github="https://github.com/graasp/graasp-app-radiation-absorption"
           thumbnailSrc={RA.src}
+          tutorialLinks={{
+            en: '/tutorials/greenhouse_effect_en.pdf',
+            fr: '/tutorials/greenhouse_effect_fr.pdf',
+          }}
         />
         <ServiceItem
           title={t('GLOBAL_MODEL_TITLE')}
@@ -64,6 +71,10 @@ const tutorialLink =
           web={`https://apps.graasp.org/f61d6916-be33-4c63-b697-2c7b09a7b8e5/latest/index.html${qs}`}
           github="https://github.com/graasp/graasp-app-greenhouse-effect"
           thumbnailSrc={GM.src}
+          tutorialLinks={{
+            en: '/tutorials/global_model_en.pdf',
+            fr: '/tutorials/global_model_fr.pdf',
+          }}
         />
         <ServiceItem
           title={t('OCEAN_ACIDIFICATION_TITLE')}
@@ -71,14 +82,13 @@ const tutorialLink =
           web={`https://graasp.github.io/graasp-app-ocean-acidification${qs}`}
           github="https://github.com/graasp/graasp-app-ocean-acidification"
           thumbnailSrc={OA.src}
+          tutorialLinks={{
+            en: '/tutorials/acidification_en.pdf',
+            fr: '/tutorials/global_model_fr.pdf',
+          }}
         />
       </div>
 
-      <p class="text-wrapper">
-        <a class="simulation-button" target="_blank" href={tutorialLink}
-          >{t('Brief tutorial of the simulations')}</a
-        >
-      </p>
       <p class="text-wrapper">
         {
           t(
@@ -91,17 +101,6 @@ const tutorialLink =
 </div>
 
 <style>
-  .simulation-button {
-    border-radius: 8px;
-    background-color: green;
-    padding: 12px 24px;
-    text-decoration: unset;
-    color: white;
-
-    &:hover {
-      background-color: darkolivegreen;
-    }
-  }
   .text-wrapper {
     margin: 20px 0;
   }
