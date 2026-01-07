@@ -32,7 +32,7 @@
   "Supported by": "Supported by",
   "Copyright": "Copyright",
   "Page Not Found": "Page non trouvée",
-  "Approved by the International Year of Basic Sciences for Sustainable Development 2022": "Approuvé par l'Année internationale des sciences fondamentales pour le développement durable 2022",
+  "APPROVAL_IYBSSD": "Approuvé par l'Année internationale des sciences fondamentales pour le développement durable 2022",
   "GLOBAL_MODEL_TITLE": "Modèle global",
   "GLOBAL_MODEL_DESCRIPTION": "Bilan radiatif avec les gaz à effet de serre, les nuages et la surface.",
   "Tutorial": "Tutoriel",
@@ -52,5 +52,6 @@
   "SCIENTIFIC_ADVISOR": "Conseiller scientifique",
   "EDUCATION_ADVISOR": "Conseiller pédagogique",
   "OCEAN_ACIDIFICATION_TITLE": "Acidification des océans",
-  "OCEAN_ACIDIFICATION_DESCRIPTION": "Diffusion du CO2 et chaîne de réactions"
+  "OCEAN_ACIDIFICATION_DESCRIPTION": "Diffusion du CO2 et chaîne de réactions",
+  "ENDORSED_JACQUES_DUBOCHET": "Parrainé par prof Jacques Dubochet (prix Nobel de chimie 2017)"
 }

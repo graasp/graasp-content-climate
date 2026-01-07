@@ -31,7 +31,7 @@
   "Supported by": "Supported by",
   "Copyright": "Copyright",
   "Page Not Found": "Page Not Found",
-  "Approved by the International Year of Basic Sciences for Sustainable Development 2022": "Approved by the International Year of Basic Sciences for Sustainable Development 2022",
+  "APPROVAL_IYBSSD": "Approved by the International Year of Basic Sciences for Sustainable Development 2022",
   "GLOBAL_MODEL_TITLE": "Global Model",
   "GLOBAL_MODEL_DESCRIPTION": "Radiative balance with greenhouse gases, clouds and surface",
   "Based on climate education research • Adapted for middle and high schools • Tested in classrooms • Easily embedded in Graasp activities and other web platforms": "Based on climate education research • Adapted for middle and high schools • Tested in classrooms • Easily embedded in Graasp activities and other web platforms",
@@ -52,5 +52,6 @@
   "SCIENTIFIC_ADVISOR": "Scientific advisor",
   "PEDAGOGICAL_ADVISOR": "Pedagogical advisor",
   "OCEAN_ACIDIFICATION_TITLE": "Ocean Acidification",
-  "OCEAN_ACIDIFICATION_DESCRIPTION": "Diffusion of CO2 and chain of reactions"
+  "OCEAN_ACIDIFICATION_DESCRIPTION": "Diffusion of CO2 and chain of reactions",
+  "ENDORSED_JACQUES_DUBOCHET": "Endorsed by prof. Jacques Dubochet (Nobel prize in Chemistry 2017)"
 }
