@@ -1,0 +1,50 @@
+---
+import Card from '../Card.astro';
+import Book from '../../images/icons/book.svg';
+import School from '../../images/icons/school.svg';
+import Atom from '../../images/icons/atom.svg';
+import Group from '../../images/icons/group.svg';
+import Reviewed from '../../images/icons/reviewed.svg';
+import Embed from '../../images/icons/embed.svg';
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<div
+  class="container-fluid spaced-container"
+  style={{
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: '100%',
+    gap: '20px',
+    backgroundColor: '#c7f1bf',
+  }}
+>
+  <div class="container">
+    <h2 class="text-center pb-5">{t('ABOUT_US_TITLE')}</h2>
+    <p set:html={t('ABOUT_US_1')} />
+    <p set:html={t('ABOUT_US_2')} />
+
+    <div class="row" style={{ display: 'flex' }}>
+      <Card iconSrc={Book.src} title={t('Based on scientific literature')} />
+      <Card iconSrc={Reviewed.src} title={t('Reviewed by expert scientists')} />
+      <Card
+        iconSrc={School.src}
+        title={t('Adapted for middle and high schools')}
+      />
+      <Card
+        iconSrc={Atom.src}
+        title={t('For physics, chemistry and biology')}
+      />
+      <Card iconSrc={Group.src} title={t('Tested in classroom')} />
+      <Card
+        iconSrc={Embed.src}
+        title={t(
+          'Easily embeddable in Graasp activities or other web platforms',
+        )}
+      />
+    </div>
+  </div>
+</div>

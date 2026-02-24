@@ -1,24 +1,31 @@
 ---
 import Layout from './Layout.astro';
 import './global.css';
+import { getLangFromUrl } from '../i18n/utils';
 
 import LandingPage from '../components/subpages/LandingPage.astro';
 import Approval from '../components/subpages/Approval.astro';
 import Team from '../components/subpages/team/Team.astro';
 import Footer from '../components/subpages/Footer.astro';
+import About from '../components/subpages/About.astro';
+import Materials from '../components/subpages/Materials.astro';
 import Physics from '../components/subpages/Physics.astro';
 import End from '../components/subpages/End.astro';
 import Activities from '../components/subpages/Activities.astro';
+
+const lang = getLangFromUrl(Astro.url);
 ---
 
 <Layout title="Graasp Climate">
   <main>
     <div>
       <LandingPage />
+      <About />
       <Approval />
       <Physics />
       <Activities />
       <!-- <Chemistry /> -->
+      {lang === 'fr' && <Materials />}
       <Team />
       <End />
       <Footer />

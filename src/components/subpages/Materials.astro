@@ -1,0 +1,58 @@
+---
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+import FileTextIcon from '../../images/icons/file-text.svg';
+
+import { Image } from 'astro:assets';
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<div id="activities" class="container-fluid pb-5">
+  <div class="container">
+    <div class="flexbox" style={{ alignItems: 'center' }}>
+      <h2 class="text-center mt-5">Materiels de cours</h2>
+      <p class="text-center mb-5">
+        Documents de cours basés sur nos simulations
+      </p>
+
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+          <a
+            class="simulation-button"
+            target="_blank"
+            href="/materials/Chapitre Climat.pdf"
+            style={{ textDecoration: 'none' }}
+          >
+            <Image alt="" src={FileTextIcon} />
+             Physique du climat (chapitre 1) (cours de 2e année gymnasiale, P.
+            Kobel, gymnase du Bugnon)
+          </a>
+        </li>
+        <li class="list-group-item">
+          <a
+            class="simulation-button"
+            target="_blank"
+            href="/materials/Chapitre Climat 2.pdf"
+            style={{ textDecoration: 'none' }}
+          >
+            <Image alt="" src={FileTextIcon} />
+             Physique du climat (chapitre 2) (cours de 2e année gymnasiale, P.
+            Kobel, gymnase du Bugnon)
+          </a>
+        </li>
+        <li class="list-group-item">
+          <a
+            class="simulation-button"
+            target="_blank"
+            href="/materials/Physique Changement climatique_Creusets.pdf"
+            style={{ textDecoration: 'none' }}
+          >
+            <Image alt="" src={FileTextIcon} />
+             Physique Réchauffement climatique (cours de 2e année gymnasiale,
+            lycée-collège des Creusets)
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

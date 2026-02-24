@@ -6,16 +6,18 @@ const t = useTranslations(lang);
 ---
 
 <div
-  class="container-fluid"
-  style={{ backgroundColor: '#cbe6ef', paddingBottom: 30 }}
+  class="container-fluid spaced-container"
+  id="contact"
+  style={{ backgroundColor: '#cbe6ef' }}
 >
   <div class="container">
     <div class="flexbox">
-      <h1 class="text-center my-5" style={{ color: 'black' }}>
+      <h2 class="text-center mb-4" style={{ color: 'black' }}>
         {t('Contact us')}
-      </h1>
-      {t('CONTACT_FORM_TEXT')}
-      <a class="text-center mt-3" href="mailto:philippe.kobel@gmail.com">
+      </h2>
+      <p class="text-center">{t('CONTACT_FORM_TEXT_1')}</p>
+      <p class="text-center">{t('CONTACT_FORM_TEXT_2')}</p>
+      <a class="text-center mt-3" href="mailto:climate@graasp.org">
         <button class="btn btn-light mb-4 py-3" type="submit">
           {t('SEND_EMAIL_BUTTON')}
         </button></a
