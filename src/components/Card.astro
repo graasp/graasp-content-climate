@@ -1,14 +1,9 @@
 ---
-import { getLangFromUrl, useTranslations } from '../i18n/utils';
-
 interface Props {
   title: string;
   iconSrc: string;
 }
 const { title, iconSrc } = Astro.props;
-
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
 ---
 
 <div class="col-12 col-md-6 col-lg-4 gx-4 gy-4">
