@@ -27,7 +27,7 @@ const t = useTranslations(lang);
     <p set:html={t('ABOUT_US_1')} />
     <p set:html={t('ABOUT_US_2')} />
 
-    <div class="row" style={{ display: 'flex' }}>
+    <div class="row" style={{ display: 'flex', justifyContent: 'center' }}>
       <Card iconSrc={Book.src} title={t('Based on scientific literature')} />
       <Card iconSrc={Reviewed.src} title={t('Reviewed by expert scientists')} />
       <Card
@@ -39,12 +39,6 @@ const t = useTranslations(lang);
         title={t('For physics, chemistry and biology')}
       />
       <Card iconSrc={Group.src} title={t('Tested in classroom')} />
-      <Card
-        iconSrc={Embed.src}
-        title={t(
-          'Easily embeddable in Graasp activities or other web platforms',
-        )}
-      />
     </div>
   </div>
 </div>
