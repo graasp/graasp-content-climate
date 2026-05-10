@@ -3,6 +3,7 @@ import Card from '../Card.astro';
 import Book from '../../images/icons/book.svg';
 import School from '../../images/icons/school.svg';
 import Atom from '../../images/icons/atom.svg';
+import Code from '../../images/icons/code.svg';
 import Group from '../../images/icons/group.svg';
 import Reviewed from '../../images/icons/reviewed.svg';
 import { getLangFromUrl, useTranslations } from '../../i18n/utils';
@@ -22,7 +23,7 @@ const t = useTranslations(lang);
   }}
 >
   <div class="container">
-    <h2 class="text-center pb-5">{t('ABOUT_US_TITLE')}</h2>
+    <h2 class="text-center mb-3">{t('ABOUT_US_TITLE')}</h2>
     <p set:html={t('ABOUT_US_1')} />
     <p set:html={t('ABOUT_US_2')} />
 
@@ -38,6 +39,7 @@ const t = useTranslations(lang);
         title={t('For physics, chemistry and biology')}
       />
       <Card iconSrc={Group.src} title={t('Tested in classroom')} />
+      <Card iconSrc={Code.src} title={t('Free and Open Source')} />
     </div>
   </div>
 </div>
