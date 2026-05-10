@@ -11,13 +11,13 @@ const t = useTranslations(lang);
 
 <div
   id="activities"
-  class="container-fluid pb-5"
+  class="container-fluid spaced-container"
   style={{ backgroundColor: '#2d672d', color: 'white' }}
 >
   <div class="container">
     <div class="flexbox" style={{ alignItems: 'center' }}>
-      <h2 class="text-center mt-5">{t('ACTIVITIES_TITLE')}</h2>
-      <p class="text-center mb-5">{t('ACTIVITIES_DESCRIPTION')}</p>
+      <h2 class="text-center mb-3">{t('ACTIVITIES_TITLE')}</h2>
+      <p class="text-center mb-5" set:html={t('ACTIVITIES_DESCRIPTION')} />
       <div
         class="row"
         style={{

@@ -1,0 +1,25 @@
+---
+interface Props {
+  title: string;
+  iconSrc: string;
+}
+const { title, iconSrc } = Astro.props;
+---
+
+<div class="col-12 col-md-6 col-lg-4 gx-4 gy-4">
+  <div
+    class="card p-3"
+    style={{
+      background: '#eaffe2',
+      borderRadius: '20px',
+      border: 'none',
+    }}
+  >
+    <div class="d-flex flex-row align-items-center">
+      <div class="col-2">
+        <img alt={`${title} link`} src={iconSrc} width={34} />
+      </div>
+      <div class="col-10">{title}</div>
+    </div>
+  </div>
+</div>

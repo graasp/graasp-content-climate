@@ -62,7 +62,7 @@ const GA_MEASUREMENT_ID = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
 </html>
 <style is:global>
   :root {
-    --accent: 136, 58, 234;
+    --accent: 45, 103, 45;
     --accent-light: 224, 204, 250;
     --accent-dark: 49, 10, 101;
     --accent-gradient: linear-gradient(
@@ -71,6 +71,9 @@ const GA_MEASUREMENT_ID = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
       rgb(var(--accent-light)) 30%,
       white 60%
     );
+
+    --bs-link-color-rgb: var(--accent);
+    --bs-link-opacity: 1;
   }
   html {
     font-family: system-ui, sans-serif;
