@@ -6,6 +6,7 @@ import OC from '../../images/simulations/oscillating-charge.png';
 import TR from '../../images/simulations/thermal-radiation.png';
 import RA from '../../images/simulations/radiation-absorption.png';
 import GM from '../../images/simulations/global-model.png';
+import CB from '../../images/simulations/coral-bleaching.png';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -91,6 +92,17 @@ const qs = `?lang=${lang}`;
           tutorialLinks={{
             en: '/tutorials/acidification_en.pdf',
             fr: '/tutorials/acidification_fr.pdf',
+          }}
+        />
+        <ServiceItem
+          title={t('CORAL_BLEACHING_TITLE')}
+          description={t('CORAL_BLEACHING_DESCRIPTION')}
+          web={`https://apps.graasp.org/coral-bleaching/latest/index.html${qs}`}
+          github="https://github.com/graasp/graasp-app-coral-bleaching"
+          thumbnailSrc={CB.src}
+          tutorialLinks={{
+            en: '/tutorials/coral_bleaching_en.pdf',
+            fr: '/tutorials/coral_bleaching_fr.pdf',
           }}
         />
       </div>
