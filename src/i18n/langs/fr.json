@@ -63,5 +63,7 @@
   "EDUCATION_ADVISOR": "Conseiller pédagogique",
   "OCEAN_ACIDIFICATION_TITLE": "Acidification des océans",
   "OCEAN_ACIDIFICATION_DESCRIPTION": "Diffusion du CO2 et chaîne de réactions",
+  "CORAL_BLEACHING_TITLE": "Blanchissement des coraux",
+  "CORAL_BLEACHING_DESCRIPTION": "Réaction d'un récif à une hausse de température",
   "ENDORSED_JACQUES_DUBOCHET": "Parrainé par prof Jacques Dubochet (prix Nobel de chimie 2017)"
 }
